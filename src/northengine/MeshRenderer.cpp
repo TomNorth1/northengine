@@ -4,6 +4,7 @@
 #include "Core.h"
 #include "Resources.h"
 #include <iostream>
+#include "Camera.h"
 
 namespace northengine
 {
@@ -12,7 +13,7 @@ namespace northengine
 		sys::String texPath = "data/textures/Whiskers_diffuse.png";
 		sys::String modPath = "data/models/curuthers.obj";
 	}
-	void MeshRenderer::init(const sys::String _texPath,  const sys::String _modPath)
+	void MeshRenderer::setResources(const sys::String _texPath,  const sys::String _modPath)
 	{
 
 		if (!getEntity()->getCore()->getResources()->load<Texture>(_texPath))
@@ -41,6 +42,18 @@ namespace northengine
 
 		r.texture(m_texture->getTexture());
 		r.depthTest(true);
+
+		std::shared_ptr<Camera> cam;
+
+		std::vector < std::shared_ptr<Camera>> camList;
+		getEntity()->getCore()->find<Camera>(camList);
+
+		if (!camList.empty()) 
+		{
+			cam = camList[0];
+		}
+	
+		r.view(cam->getView());
 
 		r.projection(rend::perspective(rend::radians(45.0f), (float)1280/720, 0.1f, 100.f));
 

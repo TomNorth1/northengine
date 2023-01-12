@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 	p = e->addComponent<Player>();
 	std::shared_ptr<MeshRenderer> mr;
 	mr = e->addComponent<MeshRenderer>();
-	mr->init("data/textures/Whiskers_diffuse.png", "data/models/curuthers.obj");
+	mr->setResources("data/textures/Whiskers_diffuse.png", "data/models/curuthers.obj");
 	e->getTransform()->setPosition(rend::vec3(0, 0, -15));
 	std::shared_ptr<BoxCollider> bc = e->addComponent<BoxCollider>();
 	bc->setSize(rend::vec3(1, 1, 1));
@@ -85,10 +85,17 @@ int main(int argc, char *argv[])
 	std::shared_ptr<Entity> other = core->addEntity();
 	std::shared_ptr<MeshRenderer> mr2;
 	mr2 = other->addComponent<MeshRenderer>();
-	mr2->init("data/textures/Whiskers_diffuse.png", "data/models/curuthers.obj");
+	mr2->setResources("data/textures/Whiskers_diffuse.png", "data/models/curuthers.obj");
+	std::shared_ptr<AudioSource> as = other->addComponent<AudioSource>();
+	as->setAudioClip(core->getResources()->load<AudioClip>("data/audio/dixie_horn.ogg"));
 	other->getTransform()->setPosition(rend::vec3(0, 0, -20));
 	std::shared_ptr<BoxCollider> bc_other = other->addComponent<BoxCollider>();
 	bc_other->setSize(rend::vec3(1, 1, 1));
+	as->play();
+
+	std::shared_ptr<Entity> camera = core->addEntity();
+	camera->addComponent<Camera>();
+	camera->getTransform()->setPosition(rend::vec3(0,0,0));
 
 	core->inputHandler->addBinding(SDLK_UP, &upArrow, &upArrowReleased);
 	core->inputHandler->addBinding(SDLK_DOWN, &downArrow, &downArrowReleased);

@@ -71,6 +71,12 @@ add_library(northengine
 
 	src/northengine/Model.h
 	src/northengine/Model.cpp
+
+	src/northengine/AudioSource.h
+	src/northengine/AudioSource.cpp
+	
+	src/northengine/AudioClip.h
+	src/northengine/AudioClip.cpp
 )
 
 target_link_libraries(northengine SDL2 SDL2main rend openal32)

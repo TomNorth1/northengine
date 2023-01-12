@@ -8,6 +8,7 @@ namespace northengine {
 	struct Entity;
 	struct InputHandler;
 	struct Resources;
+	struct Camera;
 	
 	struct Core
 	{

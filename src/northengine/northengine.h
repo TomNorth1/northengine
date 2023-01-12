@@ -11,6 +11,9 @@
 #include "BoxCollider.h"
 #include "Rigidbody.h"
 #include "Resources.h"
+#include "AudioSource.h"
+#include "AudioClip.h"
+#include "Camera.h"
 
 
 

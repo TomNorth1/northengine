@@ -14,7 +14,7 @@ namespace northengine
 	struct MeshRenderer : Component
 	{
 		MeshRenderer();
-		void init(const sys::String _texPath, const sys::String _modPath);
+		void setResources(const sys::String _texPath, const sys::String _modPath);
 	private:
 		rend::Mesh m_mesh;
 		std::shared_ptr<Model> m_model;
