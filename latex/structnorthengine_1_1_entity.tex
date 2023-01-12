@@ -1,0 +1,120 @@
+\hypertarget{structnorthengine_1_1_entity}{}\doxysection{northengine\+::Entity Struct Reference}
+\label{structnorthengine_1_1_entity}\index{northengine::Entity@{northengine::Entity}}
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{structnorthengine_1_1_entity_a9c12323850e5e3c26bcd305d61bb657d}{add\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Stores the state of the entity. Alive or dead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structnorthengine_1_1_entity_a0830394f5796779261455f8126fd364e}{m\+\_\+alive}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_entity_ac3e0a38822dba3d2494c9bdb2289e2ef}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Vector of all components attached to this entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structnorthengine_1_1_entity_aa5ebcb906430a378eb2dd579988a4101}{display}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_core}{Core}} $>$ \mbox{\hyperlink{structnorthengine_1_1_entity_aee5026a3c4b03ed59a480f918d5d772a}{m\+\_\+core}}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structnorthengine_1_1_entity_a35bb63b9011a32d1ba0e076f17213f9d}{m\+\_\+self}}
+\begin{DoxyCompactList}\small\item\em Reference to the core. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_component}{Component}} $>$ $>$ \mbox{\hyperlink{structnorthengine_1_1_entity_a40679007a1bc8a30d94cb10484f4b71e}{m\+\_\+components}}
+\begin{DoxyCompactList}\small\item\em Reference to self so children can access parent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnorthengine_1_1_entity_acd0789873af2006e142a579250891ce8}{Core}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class for every object in the game. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_entity_a9c12323850e5e3c26bcd305d61bb657d}\label{structnorthengine_1_1_entity_a9c12323850e5e3c26bcd305d61bb657d}} 
+\index{northengine::Entity@{northengine::Entity}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!northengine::Entity@{northengine::Entity}}
+\doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ northengine\+::\+Entity\+::add\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stores the state of the entity. Alive or dead. 
+
+Add component to the entity and add it to m\+\_\+components. \mbox{\Hypertarget{structnorthengine_1_1_entity_aa5ebcb906430a378eb2dd579988a4101}\label{structnorthengine_1_1_entity_aa5ebcb906430a378eb2dd579988a4101}} 
+\index{northengine::Entity@{northengine::Entity}!display@{display}}
+\index{display@{display}!northengine::Entity@{northengine::Entity}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void northengine\+::\+Entity\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structnorthengine_1_1_entity_ac3e0a38822dba3d2494c9bdb2289e2ef}\label{structnorthengine_1_1_entity_ac3e0a38822dba3d2494c9bdb2289e2ef}} 
+\index{northengine::Entity@{northengine::Entity}!tick@{tick}}
+\index{tick@{tick}!northengine::Entity@{northengine::Entity}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void northengine\+::\+Entity\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vector of all components attached to this entity. 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_entity_acd0789873af2006e142a579250891ce8}\label{structnorthengine_1_1_entity_acd0789873af2006e142a579250891ce8}} 
+\index{northengine::Entity@{northengine::Entity}!Core@{Core}}
+\index{Core@{Core}!northengine::Entity@{northengine::Entity}}
+\doxysubsubsection{\texorpdfstring{Core}{Core}}
+{\footnotesize\ttfamily friend struct \mbox{\hyperlink{structnorthengine_1_1_core}{Core}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_entity_a0830394f5796779261455f8126fd364e}\label{structnorthengine_1_1_entity_a0830394f5796779261455f8126fd364e}} 
+\index{northengine::Entity@{northengine::Entity}!m\_alive@{m\_alive}}
+\index{m\_alive@{m\_alive}!northengine::Entity@{northengine::Entity}}
+\doxysubsubsection{\texorpdfstring{m\_alive}{m\_alive}}
+{\footnotesize\ttfamily bool northengine\+::\+Entity\+::m\+\_\+alive}
+
+\mbox{\Hypertarget{structnorthengine_1_1_entity_a40679007a1bc8a30d94cb10484f4b71e}\label{structnorthengine_1_1_entity_a40679007a1bc8a30d94cb10484f4b71e}} 
+\index{northengine::Entity@{northengine::Entity}!m\_components@{m\_components}}
+\index{m\_components@{m\_components}!northengine::Entity@{northengine::Entity}}
+\doxysubsubsection{\texorpdfstring{m\_components}{m\_components}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structnorthengine_1_1_component}{Component}}$>$ $>$ northengine\+::\+Entity\+::m\+\_\+components\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to self so children can access parent. 
+
+\mbox{\Hypertarget{structnorthengine_1_1_entity_aee5026a3c4b03ed59a480f918d5d772a}\label{structnorthengine_1_1_entity_aee5026a3c4b03ed59a480f918d5d772a}} 
+\index{northengine::Entity@{northengine::Entity}!m\_core@{m\_core}}
+\index{m\_core@{m\_core}!northengine::Entity@{northengine::Entity}}
+\doxysubsubsection{\texorpdfstring{m\_core}{m\_core}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{structnorthengine_1_1_core}{Core}}$>$ northengine\+::\+Entity\+::m\+\_\+core\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structnorthengine_1_1_entity_a35bb63b9011a32d1ba0e076f17213f9d}\label{structnorthengine_1_1_entity_a35bb63b9011a32d1ba0e076f17213f9d}} 
+\index{northengine::Entity@{northengine::Entity}!m\_self@{m\_self}}
+\index{m\_self@{m\_self}!northengine::Entity@{northengine::Entity}}
+\doxysubsubsection{\texorpdfstring{m\_self}{m\_self}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}}$>$ northengine\+::\+Entity\+::m\+\_\+self\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to the core. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/northengine/\mbox{\hyperlink{_entity_8h}{Entity.\+h}}\item 
+src/northengine/\mbox{\hyperlink{_entity_8cpp}{Entity.\+cpp}}\end{DoxyCompactItemize}

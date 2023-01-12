@@ -1,0 +1,43 @@
+\hypertarget{_entity_8h_source}{}\doxysection{Entity.\+h}
+\label{_entity_8h_source}\index{src/northengine/Entity.h@{src/northengine/Entity.h}}
+\mbox{\hyperlink{_entity_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenorthengine}{northengine}} }
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6     \textcolor{keyword}{struct }Component;}
+\DoxyCodeLine{7     \textcolor{keyword}{struct }Core;}
+\DoxyCodeLine{11     \textcolor{keyword}{struct }\mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} }
+\DoxyCodeLine{12     \{}
+\DoxyCodeLine{13         }
+\DoxyCodeLine{14         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structnorthengine_1_1_entity_a0830394f5796779261455f8126fd364e}{m\_alive}};}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18         \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{22         std::shared\_ptr<T> \mbox{\hyperlink{structnorthengine_1_1_entity_a9c12323850e5e3c26bcd305d61bb657d}{addComponent}}() }
+\DoxyCodeLine{23         \{}
+\DoxyCodeLine{24             std::shared\_ptr<T> rtn = std::make\_shared<T>();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26             \mbox{\hyperlink{structnorthengine_1_1_entity_a40679007a1bc8a30d94cb10484f4b71e}{m\_components}}.push\_back(rtn);}
+\DoxyCodeLine{27             \textcolor{keywordflow}{return} rtn;}
+\DoxyCodeLine{28         \}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         }
+\DoxyCodeLine{31     \textcolor{keyword}{private}:}
+\DoxyCodeLine{32         \textcolor{keyword}{friend} \textcolor{keyword}{struct }\mbox{\hyperlink{structnorthengine_1_1_core}{Core}};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34         std::weak\_ptr<Core> \mbox{\hyperlink{structnorthengine_1_1_entity_aee5026a3c4b03ed59a480f918d5d772a}{m\_core}};}
+\DoxyCodeLine{35         std::weak\_ptr<Entity> \mbox{\hyperlink{structnorthengine_1_1_entity_a35bb63b9011a32d1ba0e076f17213f9d}{m\_self}};}
+\DoxyCodeLine{36         std::vector<std::shared\_ptr<Component>> \mbox{\hyperlink{structnorthengine_1_1_entity_a40679007a1bc8a30d94cb10484f4b71e}{m\_components}};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \textcolor{keywordtype}{void} \mbox{\hyperlink{structnorthengine_1_1_entity_ac3e0a38822dba3d2494c9bdb2289e2ef}{tick}}();}
+\DoxyCodeLine{39         \textcolor{keywordtype}{void} \mbox{\hyperlink{structnorthengine_1_1_entity_aa5ebcb906430a378eb2dd579988a4101}{display}}();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}

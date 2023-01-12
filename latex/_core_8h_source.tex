@@ -1,0 +1,30 @@
+\hypertarget{_core_8h_source}{}\doxysection{Core.\+h}
+\label{_core_8h_source}\index{src/northengine/Core.h@{src/northengine/Core.h}}
+\mbox{\hyperlink{_core_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}SDL2/SDL.h"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenorthengine}{northengine}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8     \textcolor{keyword}{struct }Entity;}
+\DoxyCodeLine{9     \textcolor{keyword}{struct }\mbox{\hyperlink{structnorthengine_1_1_core}{Core}}}
+\DoxyCodeLine{10     \{}
+\DoxyCodeLine{11         \textcolor{keyword}{static} std::shared\_ptr<Core> \mbox{\hyperlink{structnorthengine_1_1_core_a5f867169acedaa0942d74146099c2abc}{initialize}}();}
+\DoxyCodeLine{12         std::shared\_ptr<Entity> \mbox{\hyperlink{structnorthengine_1_1_core_af9a9592603b2c96ec9348013d69669cf}{addEntity}}();}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14         \textcolor{keywordtype}{void} \mbox{\hyperlink{structnorthengine_1_1_core_a38f4b88851e9746a2213d75cbce23547}{start}}();}
+\DoxyCodeLine{15         \textcolor{keywordtype}{void} \mbox{\hyperlink{structnorthengine_1_1_core_a946be7a06c2e820b8c6a552664636637}{stop}}();}
+\DoxyCodeLine{16     \textcolor{keyword}{private}:}
+\DoxyCodeLine{17         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structnorthengine_1_1_core_afefc9acede32f046b1f029b0ee279286}{m\_running}};}
+\DoxyCodeLine{18         SDL\_Window* \mbox{\hyperlink{structnorthengine_1_1_core_accc4a863a43cb5afe3269cfe0f4a5953}{m\_window}};}
+\DoxyCodeLine{19         SDL\_GLContext \mbox{\hyperlink{structnorthengine_1_1_core_abd5ca25cd82f6d5fa179ef5796c611ec}{m\_context}};}
+\DoxyCodeLine{20         std::weak\_ptr<Core> \mbox{\hyperlink{structnorthengine_1_1_core_a955a4d98cdef70e829db804107ed0567}{m\_self}};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22         std::list <std::shared\_ptr<Entity> > \mbox{\hyperlink{structnorthengine_1_1_core_a2bde74df2d37caa711fdc011f15b18a7}{m\_entities}};}
+\DoxyCodeLine{23     \};}
+\DoxyCodeLine{24 \};}
+
+\end{DoxyCode}
