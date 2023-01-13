@@ -30,6 +30,10 @@ namespace northengine
 	{
 		m_rotation = _rotation;
 	}
+	void Transform::setScale(const rend::vec3& _scale)
+	{
+		m_scale = _scale;
+	}
 	rend::vec3 Transform::getPosition()
 	{
 		return m_position;

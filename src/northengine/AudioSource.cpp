@@ -41,4 +41,10 @@ namespace northengine
 	{
 		alSourcePlay(sourceId);
 	}
+	void AudioSource::onTick()
+	{
+
+		rend::vec3 sourcePos = getEntity()->getTransform()->getPosition();
+		alSource3f(sourceId, AL_POSITION, sourcePos.x, sourcePos.y, sourcePos.z);
+	}
 }

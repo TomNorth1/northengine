@@ -12,6 +12,7 @@ namespace northengine
 
 		void setPosition(const rend::vec3& _position);
 		void setRotation(const rend::vec3& _rotation);
+		void setScale(const rend::vec3& _scale);
 
 		rend::vec3 getPosition();
 		rend::vec3 getRotation();

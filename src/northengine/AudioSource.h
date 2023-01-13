@@ -15,6 +15,7 @@ namespace northengine
 		void setAudioClip(std::shared_ptr<AudioClip> _audioClip);
 
 		void play();
+		void onTick();
 
 		//std::shared_ptr<AudioClip> m_audioClip;
 	private:
