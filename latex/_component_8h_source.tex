@@ -2,27 +2,31 @@
 \label{_component_8h_source}\index{src/northengine/Component.h@{src/northengine/Component.h}}
 \mbox{\hyperlink{_component_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef NORTHENGINE\_COMPONENT\_H}}
-\DoxyCodeLine{2 \textcolor{preprocessor}{\#define NORTHENGINE\_COMPONENT\_H}}
-\DoxyCodeLine{3 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenorthengine}{northengine}} }
-\DoxyCodeLine{4 \{}
-\DoxyCodeLine{5     \textcolor{keyword}{struct }Entity;}
-\DoxyCodeLine{6 }
-\DoxyCodeLine{7 }
-\DoxyCodeLine{8     \textcolor{keyword}{struct }\mbox{\hyperlink{structnorthengine_1_1_component}{Component}}}
-\DoxyCodeLine{9     \{}
-\DoxyCodeLine{10         }
-\DoxyCodeLine{11     \textcolor{keyword}{private}:}
-\DoxyCodeLine{12         \textcolor{keyword}{friend} \textcolor{keyword}{struct }\mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}};}
-\DoxyCodeLine{13         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{onTick}}();}
-\DoxyCodeLine{14         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}{onDisplay}}();}
-\DoxyCodeLine{15 }
-\DoxyCodeLine{16         \textcolor{keywordtype}{void} \mbox{\hyperlink{structnorthengine_1_1_component_ae818eb3c1dcb3677996536897ab6bcd2}{tick}}();}
-\DoxyCodeLine{17         \textcolor{keywordtype}{void} \mbox{\hyperlink{structnorthengine_1_1_component_a3d4ccb1e29a434a58378e0c6f7e1a403}{display}}();}
-\DoxyCodeLine{18     \};}
-\DoxyCodeLine{19 \}}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{21 }
-\DoxyCodeLine{22 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !NORTHENGINE\_COMPONENT\_H}}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NORTHENGINE\_COMPONENT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NORTHENGINE\_COMPONENT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacenorthengine}{northengine}}\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{struct\ }Entity;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnorthengine_1_1_component}{Component}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{onTick}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}{onDisplay}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::shared\_ptr<Entity>\ \mbox{\hyperlink{structnorthengine_1_1_component_af3a47e84c6a254cb2e156f57b1f185fe}{getEntity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::weak\_ptr<Entity>\ \mbox{\hyperlink{structnorthengine_1_1_component_aff0ebae02075384aa7c7e4a8bb5a823d}{m\_entity}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_component_ae818eb3c1dcb3677996536897ab6bcd2}{tick}}();\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_component_a3d4ccb1e29a434a58378e0c6f7e1a403}{display}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ \}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

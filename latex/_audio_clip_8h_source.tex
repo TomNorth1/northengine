@@ -1,0 +1,30 @@
+\hypertarget{_audio_clip_8h_source}{}\doxysection{Audio\+Clip.\+h}
+\label{_audio_clip_8h_source}\index{src/northengine/AudioClip.h@{src/northengine/AudioClip.h}}
+\mbox{\hyperlink{_audio_clip_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_resource_8h}{Resource.h}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <AL/al.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <AL/alc.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_string_8h}{rend/sys/String.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacenorthengine}{northengine}}\ }
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnorthengine_1_1_audio_clip}{AudioClip}}\ :\ \mbox{\hyperlink{structnorthengine_1_1_resource}{Resource}}}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_audio_clip_a8e1c1bba1872d2e6073544e21770145f}{onLoad}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_audio_clip_a0d80482d1b7032aa30225f6c18ec1b13}{load\_ogg}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structsys_1_1_string}{sys::String}}\&\ \_path,\ std::vector<unsigned\ char>\&\ \_buffer,}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ ALenum\&\ \_format,\ ALsizei\&\ \_freq);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ ALenum\ \mbox{\hyperlink{structnorthengine_1_1_audio_clip_a2624781261e48a3212dd93ead3817427}{getFormat}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ ALsizei\ \mbox{\hyperlink{structnorthengine_1_1_audio_clip_addfbf8a0f68dd3deac30b760724e37dc}{getFreq}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::vector<unsigned\ char>\ \mbox{\hyperlink{structnorthengine_1_1_audio_clip_a831314bc3cf1c998cddf9405dc565454}{getBufferData}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ ALenum\ \mbox{\hyperlink{structnorthengine_1_1_audio_clip_af5f4339d8b983efa613fc402f32ba034}{format}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ ALsizei\ \mbox{\hyperlink{structnorthengine_1_1_audio_clip_ad7b659fdbc053342c558fbed3407243d}{freq}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::vector<unsigned\ char>\ \mbox{\hyperlink{structnorthengine_1_1_audio_clip_a1c65dc33df132c59d1a7a4f6f7948247}{bufferData}};}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}

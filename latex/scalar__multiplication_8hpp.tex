@@ -44,22 +44,22 @@ Since GLSL is very strict about types, the following (often used) combinations d
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    template<typename T> \(\backslash\)}
-\DoxyCodeLine{    return\_type\_scalar\_multiplication<T, Vec> \(\backslash\)}
-\DoxyCodeLine{    operator*(T \textcolor{keyword}{const}\& s, Vec rh)\{ \(\backslash\)}
-\DoxyCodeLine{        \textcolor{keywordflow}{return} rh *= \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(s); \(\backslash\)}
-\DoxyCodeLine{    \} \(\backslash\)}
-\DoxyCodeLine{     \(\backslash\)}
-\DoxyCodeLine{    template<typename T> \(\backslash\)}
-\DoxyCodeLine{    return\_type\_scalar\_multiplication<T, Vec> \(\backslash\)}
-\DoxyCodeLine{    operator*(Vec lh, T \textcolor{keyword}{const}\& s)\{ \(\backslash\)}
-\DoxyCodeLine{        \textcolor{keywordflow}{return} lh *= \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(s); \(\backslash\)}
-\DoxyCodeLine{    \} \(\backslash\)}
-\DoxyCodeLine{     \(\backslash\)}
-\DoxyCodeLine{    template<typename T> \(\backslash\)}
-\DoxyCodeLine{    return\_type\_scalar\_multiplication<T, Vec> \(\backslash\)}
-\DoxyCodeLine{    operator/(Vec lh, T \textcolor{keyword}{const}\& s)\{ \(\backslash\)}
-\DoxyCodeLine{        \textcolor{keywordflow}{return} lh *= 1.0f / \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(s); \(\backslash\)}
-\DoxyCodeLine{    \}}
+\DoxyCodeLine{\ \ \ \ template<typename\ T>\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ return\_type\_scalar\_multiplication<T,\ Vec>\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ operator*(T\ \textcolor{keyword}{const}\&\ s,\ Vec\ rh)\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rh\ *=\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(s);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ template<typename\ T>\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ return\_type\_scalar\_multiplication<T,\ Vec>\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ operator*(Vec\ lh,\ T\ \textcolor{keyword}{const}\&\ s)\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lh\ *=\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(s);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ template<typename\ T>\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ return\_type\_scalar\_multiplication<T,\ Vec>\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ operator/(Vec\ lh,\ T\ \textcolor{keyword}{const}\&\ s)\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lh\ *=\ 1.0f\ /\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(s);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
 
 \end{DoxyCode}

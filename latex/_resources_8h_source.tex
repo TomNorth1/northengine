@@ -1,0 +1,50 @@
+\hypertarget{_resources_8h_source}{}\doxysection{Resources.\+h}
+\label{_resources_8h_source}\index{src/northengine/Resources.h@{src/northengine/Resources.h}}
+\mbox{\hyperlink{_resources_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_string_8h}{rend/sys/String.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacenorthengine}{northengine}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{struct\ }Resource;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnorthengine_1_1_resources}{Resources}}\ }
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::shared\_ptr<T>\ \mbox{\hyperlink{structnorthengine_1_1_resources_a21d63b17706c00e8dc93eb61dd8be670}{load}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structsys_1_1_string}{sys::String}}\&\ \_path)\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{structnorthengine_1_1_resources_a6b2b879ee7257d81c2df61b4241034a5}{m\_resources}}.size();\ ++i)}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Return\ it\ if\ found}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{structnorthengine_1_1_resources_a6b2b879ee7257d81c2df61b4241034a5}{m\_resources}}.at(i)-\/>getPath()\ ==\ \_path)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<Resource>\ r\ =\ \mbox{\hyperlink{structnorthengine_1_1_resources_a6b2b879ee7257d81c2df61b4241034a5}{m\_resources}}.at(i);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<T>\ t\ =\ std::dynamic\_pointer\_cast<T>(r);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (t)\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ t;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ new\ instance,\ construct\ it\ and\ add\ to\ cache}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<T>\ rtn\ =\ std::make\_shared<T>();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ rtn-\/>m\_path\ =\ \_path;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnorthengine_1_1_resources_a6b2b879ee7257d81c2df61b4241034a5}{m\_resources}}.push\_back(rtn);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ rtn-\/>load();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rtn;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{structnorthengine_1_1_resources_a51d25c307fa371e819a142df67641bba}{Resource}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ std::vector\ <\ std::shared\_ptr<Resource>>\ \mbox{\hyperlink{structnorthengine_1_1_resources_a6b2b879ee7257d81c2df61b4241034a5}{m\_resources}};}
+\DoxyCodeLine{00052\ \ \ \ \ \};}
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}

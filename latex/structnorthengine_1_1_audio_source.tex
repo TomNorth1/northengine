@@ -1,0 +1,136 @@
+\hypertarget{structnorthengine_1_1_audio_source}{}\doxysection{northengine\+::Audio\+Source Struct Reference}
+\label{structnorthengine_1_1_audio_source}\index{northengine::AudioSource@{northengine::AudioSource}}
+
+
+{\ttfamily \#include $<$Audio\+Source.\+h$>$}
+
+Inheritance diagram for northengine\+::Audio\+Source\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structnorthengine_1_1_audio_source}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structnorthengine_1_1_audio_source_aada8e43c846f68a31912dd7fe32d1538}{Audio\+Source}} ()
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_audio_source_a0ea4257103f4bad12f33a2cf6c7ecfa7}{set\+Audio\+Clip}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_audio_clip}{Audio\+Clip}} $>$ \+\_\+audio\+Clip)
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_audio_source_a7e18da8ca88a58e852ce36c9a1ae6aa2}{play}} ()
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_audio_source_a1c16f3baa1d0f308f5ce50b6cd1e9f01}{on\+Tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{structnorthengine_1_1_component}{northengine\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{on\+Tick}} ()
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}{on\+Display}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structnorthengine_1_1_component_af3a47e84c6a254cb2e156f57b1f185fe}{get\+Entity}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ALuint \mbox{\hyperlink{structnorthengine_1_1_audio_source_ac32f1e8507aec8dc28cd56eec513a9ac}{source\+Id}}
+\begin{DoxyCompactList}\small\item\em source id \end{DoxyCompactList}\item 
+ALenum \mbox{\hyperlink{structnorthengine_1_1_audio_source_aed41b9a3659420b7295224c8fe8eab07}{format}}
+\begin{DoxyCompactList}\small\item\em format of audio clip \end{DoxyCompactList}\item 
+ALsizei \mbox{\hyperlink{structnorthengine_1_1_audio_source_a66897070b9a13015d49fad00e3a1b7c6}{freq}}
+\begin{DoxyCompactList}\small\item\em frequency of audio buffer \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned char $>$ \mbox{\hyperlink{structnorthengine_1_1_audio_source_a1d67a7622b006c04154581ebd8cbab78}{buffer\+Data}}
+\begin{DoxyCompactList}\small\item\em data from audio clip \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{structnorthengine_1_1_component}{Component}} responsible for playing audio 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_audio_source_aada8e43c846f68a31912dd7fe32d1538}\label{structnorthengine_1_1_audio_source_aada8e43c846f68a31912dd7fe32d1538}} 
+\index{northengine::AudioSource@{northengine::AudioSource}!AudioSource@{AudioSource}}
+\index{AudioSource@{AudioSource}!northengine::AudioSource@{northengine::AudioSource}}
+\doxysubsubsection{\texorpdfstring{AudioSource()}{AudioSource()}}
+{\footnotesize\ttfamily northengine\+::\+Audio\+Source\+::\+Audio\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+default constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_audio_source_a1c16f3baa1d0f308f5ce50b6cd1e9f01}\label{structnorthengine_1_1_audio_source_a1c16f3baa1d0f308f5ce50b6cd1e9f01}} 
+\index{northengine::AudioSource@{northengine::AudioSource}!onTick@{onTick}}
+\index{onTick@{onTick}!northengine::AudioSource@{northengine::AudioSource}}
+\doxysubsubsection{\texorpdfstring{onTick()}{onTick()}}
+{\footnotesize\ttfamily void northengine\+::\+Audio\+Source\+::on\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+updates position of audio source 
+
+Reimplemented from \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{northengine\+::\+Component}}.
+
+\mbox{\Hypertarget{structnorthengine_1_1_audio_source_a7e18da8ca88a58e852ce36c9a1ae6aa2}\label{structnorthengine_1_1_audio_source_a7e18da8ca88a58e852ce36c9a1ae6aa2}} 
+\index{northengine::AudioSource@{northengine::AudioSource}!play@{play}}
+\index{play@{play}!northengine::AudioSource@{northengine::AudioSource}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void northengine\+::\+Audio\+Source\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+plays audio clip \mbox{\Hypertarget{structnorthengine_1_1_audio_source_a0ea4257103f4bad12f33a2cf6c7ecfa7}\label{structnorthengine_1_1_audio_source_a0ea4257103f4bad12f33a2cf6c7ecfa7}} 
+\index{northengine::AudioSource@{northengine::AudioSource}!setAudioClip@{setAudioClip}}
+\index{setAudioClip@{setAudioClip}!northengine::AudioSource@{northengine::AudioSource}}
+\doxysubsubsection{\texorpdfstring{setAudioClip()}{setAudioClip()}}
+{\footnotesize\ttfamily void northengine\+::\+Audio\+Source\+::set\+Audio\+Clip (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_audio_clip}{Audio\+Clip}} $>$}]{\+\_\+audio\+Clip }\end{DoxyParamCaption})}
+
+load audio clip resource
+
+
+\begin{DoxyParams}{Parameters}
+{\em Audio} & clip resource \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_audio_source_a1d67a7622b006c04154581ebd8cbab78}\label{structnorthengine_1_1_audio_source_a1d67a7622b006c04154581ebd8cbab78}} 
+\index{northengine::AudioSource@{northengine::AudioSource}!bufferData@{bufferData}}
+\index{bufferData@{bufferData}!northengine::AudioSource@{northengine::AudioSource}}
+\doxysubsubsection{\texorpdfstring{bufferData}{bufferData}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned char$>$ northengine\+::\+Audio\+Source\+::buffer\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+data from audio clip 
+
+\mbox{\Hypertarget{structnorthengine_1_1_audio_source_aed41b9a3659420b7295224c8fe8eab07}\label{structnorthengine_1_1_audio_source_aed41b9a3659420b7295224c8fe8eab07}} 
+\index{northengine::AudioSource@{northengine::AudioSource}!format@{format}}
+\index{format@{format}!northengine::AudioSource@{northengine::AudioSource}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily ALenum northengine\+::\+Audio\+Source\+::format\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+format of audio clip 
+
+\mbox{\Hypertarget{structnorthengine_1_1_audio_source_a66897070b9a13015d49fad00e3a1b7c6}\label{structnorthengine_1_1_audio_source_a66897070b9a13015d49fad00e3a1b7c6}} 
+\index{northengine::AudioSource@{northengine::AudioSource}!freq@{freq}}
+\index{freq@{freq}!northengine::AudioSource@{northengine::AudioSource}}
+\doxysubsubsection{\texorpdfstring{freq}{freq}}
+{\footnotesize\ttfamily ALsizei northengine\+::\+Audio\+Source\+::freq\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+frequency of audio buffer 
+
+\mbox{\Hypertarget{structnorthengine_1_1_audio_source_ac32f1e8507aec8dc28cd56eec513a9ac}\label{structnorthengine_1_1_audio_source_ac32f1e8507aec8dc28cd56eec513a9ac}} 
+\index{northengine::AudioSource@{northengine::AudioSource}!sourceId@{sourceId}}
+\index{sourceId@{sourceId}!northengine::AudioSource@{northengine::AudioSource}}
+\doxysubsubsection{\texorpdfstring{sourceId}{sourceId}}
+{\footnotesize\ttfamily ALuint northengine\+::\+Audio\+Source\+::source\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+source id 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/northengine/\mbox{\hyperlink{_audio_source_8h}{Audio\+Source.\+h}}\item 
+src/northengine/\mbox{\hyperlink{_audio_source_8cpp}{Audio\+Source.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\hypertarget{structnorthengine_1_1_resource}{}\doxysection{northengine\+::Resource Struct Reference}
+\label{structnorthengine_1_1_resource}\index{northengine::Resource@{northengine::Resource}}
+
+
+{\ttfamily \#include $<$Resource.\+h$>$}
+
+Inheritance diagram for northengine\+::Resource\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structnorthengine_1_1_resource}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_resource_ace9e4b4bc4959e8f50f9feaa3fcd1b5f}{on\+Load}} ()=0
+\item 
+\mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \mbox{\hyperlink{structnorthengine_1_1_resource_a3f8b0c5b763aa939a465aa7316902697}{get\+Path}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_resource_a6a6fe9ef733bd438c2057c1099fb7472}{load}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+friend \mbox{\hyperlink{structnorthengine_1_1_resource_a5fbb80b31cffcca4767efadbf47c987a}{Resources}}
+\item 
+\mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \mbox{\hyperlink{structnorthengine_1_1_resource_a103472331f8b50f521bebcd8f24c89c6}{m\+\_\+path}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_resource_a3f8b0c5b763aa939a465aa7316902697}\label{structnorthengine_1_1_resource_a3f8b0c5b763aa939a465aa7316902697}} 
+\index{northengine::Resource@{northengine::Resource}!getPath@{getPath}}
+\index{getPath@{getPath}!northengine::Resource@{northengine::Resource}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} northengine\+::\+Resource\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+returns path to resource
+
+\begin{DoxyReturn}{Returns}
+path string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structnorthengine_1_1_resource_a6a6fe9ef733bd438c2057c1099fb7472}\label{structnorthengine_1_1_resource_a6a6fe9ef733bd438c2057c1099fb7472}} 
+\index{northengine::Resource@{northengine::Resource}!load@{load}}
+\index{load@{load}!northengine::Resource@{northengine::Resource}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void northengine\+::\+Resource\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structnorthengine_1_1_resource_ace9e4b4bc4959e8f50f9feaa3fcd1b5f}\label{structnorthengine_1_1_resource_ace9e4b4bc4959e8f50f9feaa3fcd1b5f}} 
+\index{northengine::Resource@{northengine::Resource}!onLoad@{onLoad}}
+\index{onLoad@{onLoad}!northengine::Resource@{northengine::Resource}}
+\doxysubsubsection{\texorpdfstring{onLoad()}{onLoad()}}
+{\footnotesize\ttfamily virtual void northengine\+::\+Resource\+::on\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+event is called when resource is loaded in to the resource manager 
+
+Implemented in \mbox{\hyperlink{structnorthengine_1_1_audio_clip_a8e1c1bba1872d2e6073544e21770145f}{northengine\+::\+Audio\+Clip}}, \mbox{\hyperlink{structnorthengine_1_1_model_a5095cb7eb066acbb520b61c89cbbf4ab}{northengine\+::\+Model}}, and \mbox{\hyperlink{structnorthengine_1_1_texture_a43f0b8d7c203b9c8b366397c06662df8}{northengine\+::\+Texture}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_resource_a103472331f8b50f521bebcd8f24c89c6}\label{structnorthengine_1_1_resource_a103472331f8b50f521bebcd8f24c89c6}} 
+\index{northengine::Resource@{northengine::Resource}!m\_path@{m\_path}}
+\index{m\_path@{m\_path}!northengine::Resource@{northengine::Resource}}
+\doxysubsubsection{\texorpdfstring{m\_path}{m\_path}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} northengine\+::\+Resource\+::m\+\_\+path\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structnorthengine_1_1_resource_a5fbb80b31cffcca4767efadbf47c987a}\label{structnorthengine_1_1_resource_a5fbb80b31cffcca4767efadbf47c987a}} 
+\index{northengine::Resource@{northengine::Resource}!Resources@{Resources}}
+\index{Resources@{Resources}!northengine::Resource@{northengine::Resource}}
+\doxysubsubsection{\texorpdfstring{Resources}{Resources}}
+{\footnotesize\ttfamily friend northengine\+::\+Resource\+::\+Resources\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/northengine/\mbox{\hyperlink{_resource_8h}{Resource.\+h}}\item 
+src/northengine/\mbox{\hyperlink{_resource_8cpp}{Resource.\+cpp}}\end{DoxyCompactItemize}

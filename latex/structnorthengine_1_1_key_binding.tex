@@ -1,0 +1,97 @@
+\hypertarget{structnorthengine_1_1_key_binding}{}\doxysection{northengine\+::Key\+Binding Struct Reference}
+\label{structnorthengine_1_1_key_binding}\index{northengine::KeyBinding@{northengine::KeyBinding}}
+
+
+{\ttfamily \#include $<$Keyboard.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structnorthengine_1_1_key_binding_a08e5aee1af24b02adca2119cf619d1d7}{Key\+Binding}} (SDL\+\_\+\+Keycode \+\_\+key, std\+::function$<$ void()$>$ \+\_\+func\+Down, std\+::function$<$ void()$>$ \+\_\+func\+Up)
+\item 
+SDL\+\_\+\+Keycode \mbox{\hyperlink{structnorthengine_1_1_key_binding_a077a173a39d74ae80255111adc0bceb6}{get\+Key}} ()
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_key_binding_a2253cefc28d8d2d4bb9ff8348dbdc62b}{call\+Down\+Func}} ()
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_key_binding_a584cb6469808acd3634ceb2a0496dcf9}{call\+Up\+Func}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+SDL\+\_\+\+Keycode \mbox{\hyperlink{structnorthengine_1_1_key_binding_a2a402d64ec488558f66b55169eee7a57}{m\+\_\+key}}
+\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{structnorthengine_1_1_key_binding_ab340ad11730c7e6f29de51913fbdfd39}{m\+\_\+func\+Down}}
+\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{structnorthengine_1_1_key_binding_a5f1faf4ef91b66780535efc0b0da0e7f}{m\+\_\+func\+Up}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+binds a key to a pressed and released function 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_key_binding_a08e5aee1af24b02adca2119cf619d1d7}\label{structnorthengine_1_1_key_binding_a08e5aee1af24b02adca2119cf619d1d7}} 
+\index{northengine::KeyBinding@{northengine::KeyBinding}!KeyBinding@{KeyBinding}}
+\index{KeyBinding@{KeyBinding}!northengine::KeyBinding@{northengine::KeyBinding}}
+\doxysubsubsection{\texorpdfstring{KeyBinding()}{KeyBinding()}}
+{\footnotesize\ttfamily northengine\+::\+Key\+Binding\+::\+Key\+Binding (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Keycode}]{\+\_\+key,  }\item[{std\+::function$<$ void()$>$}]{\+\_\+func\+Down,  }\item[{std\+::function$<$ void()$>$}]{\+\_\+func\+Up }\end{DoxyParamCaption})}
+
+default constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+key} & the SDLKeycode you want to create a binding for \\
+\hline
+{\em \+\_\+func\+Down} & the function to call when key is pressed \\
+\hline
+{\em \+\_\+func\+Up} & the function to call when key is released \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_key_binding_a2253cefc28d8d2d4bb9ff8348dbdc62b}\label{structnorthengine_1_1_key_binding_a2253cefc28d8d2d4bb9ff8348dbdc62b}} 
+\index{northengine::KeyBinding@{northengine::KeyBinding}!callDownFunc@{callDownFunc}}
+\index{callDownFunc@{callDownFunc}!northengine::KeyBinding@{northengine::KeyBinding}}
+\doxysubsubsection{\texorpdfstring{callDownFunc()}{callDownFunc()}}
+{\footnotesize\ttfamily void northengine\+::\+Key\+Binding\+::call\+Down\+Func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structnorthengine_1_1_key_binding_a584cb6469808acd3634ceb2a0496dcf9}\label{structnorthengine_1_1_key_binding_a584cb6469808acd3634ceb2a0496dcf9}} 
+\index{northengine::KeyBinding@{northengine::KeyBinding}!callUpFunc@{callUpFunc}}
+\index{callUpFunc@{callUpFunc}!northengine::KeyBinding@{northengine::KeyBinding}}
+\doxysubsubsection{\texorpdfstring{callUpFunc()}{callUpFunc()}}
+{\footnotesize\ttfamily void northengine\+::\+Key\+Binding\+::call\+Up\+Func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structnorthengine_1_1_key_binding_a077a173a39d74ae80255111adc0bceb6}\label{structnorthengine_1_1_key_binding_a077a173a39d74ae80255111adc0bceb6}} 
+\index{northengine::KeyBinding@{northengine::KeyBinding}!getKey@{getKey}}
+\index{getKey@{getKey}!northengine::KeyBinding@{northengine::KeyBinding}}
+\doxysubsubsection{\texorpdfstring{getKey()}{getKey()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Keycode northengine\+::\+Key\+Binding\+::get\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_key_binding_ab340ad11730c7e6f29de51913fbdfd39}\label{structnorthengine_1_1_key_binding_ab340ad11730c7e6f29de51913fbdfd39}} 
+\index{northengine::KeyBinding@{northengine::KeyBinding}!m\_funcDown@{m\_funcDown}}
+\index{m\_funcDown@{m\_funcDown}!northengine::KeyBinding@{northengine::KeyBinding}}
+\doxysubsubsection{\texorpdfstring{m\_funcDown}{m\_funcDown}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ northengine\+::\+Key\+Binding\+::m\+\_\+func\+Down\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structnorthengine_1_1_key_binding_a5f1faf4ef91b66780535efc0b0da0e7f}\label{structnorthengine_1_1_key_binding_a5f1faf4ef91b66780535efc0b0da0e7f}} 
+\index{northengine::KeyBinding@{northengine::KeyBinding}!m\_funcUp@{m\_funcUp}}
+\index{m\_funcUp@{m\_funcUp}!northengine::KeyBinding@{northengine::KeyBinding}}
+\doxysubsubsection{\texorpdfstring{m\_funcUp}{m\_funcUp}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ northengine\+::\+Key\+Binding\+::m\+\_\+func\+Up\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structnorthengine_1_1_key_binding_a2a402d64ec488558f66b55169eee7a57}\label{structnorthengine_1_1_key_binding_a2a402d64ec488558f66b55169eee7a57}} 
+\index{northengine::KeyBinding@{northengine::KeyBinding}!m\_key@{m\_key}}
+\index{m\_key@{m\_key}!northengine::KeyBinding@{northengine::KeyBinding}}
+\doxysubsubsection{\texorpdfstring{m\_key}{m\_key}}
+{\footnotesize\ttfamily SDL\+\_\+\+Keycode northengine\+::\+Key\+Binding\+::m\+\_\+key\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/northengine/\mbox{\hyperlink{_keyboard_8h}{Keyboard.\+h}}\item 
+src/northengine/\mbox{\hyperlink{_keyboard_8cpp}{Keyboard.\+cpp}}\end{DoxyCompactItemize}

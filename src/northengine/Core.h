@@ -10,17 +10,46 @@ namespace northengine {
 	struct Resources;
 	struct Camera;
 	
+
+	/**
+	* Main core of our engine. Will hold list of all entities annd resources our game needs as being in charge of the main game loop.
+	*/
 	struct Core
 	{
+		/**
+		* Creates core object. Initializes member variables of core, setup SDL_Window and audio.
+		* 
+		* \return A shared ptr to the core 
+		*/
 		static std::shared_ptr<Core> initialize();
 
+
+		/**
+		* Starts the core game loop and enables ticking and updating of entities.
+		*/
 		void start();
+
+		/**
+		* Stops the core game loop.
+		*/
 		void stop();
 
+		/**
+		* Adds a new entity to the m_entities vector.
+		* 
+		* \return Pointer to the new entity
+		*/
 		std::shared_ptr<Entity> addEntity();
 
-		std::shared_ptr<InputHandler> inputHandler;
 
+		
+		std::shared_ptr<InputHandler> inputHandler; ///< InputHandler to handle all of your games input
+
+		/**
+		* Template function to find all the components of a specified type T
+		* 
+		* \param _out the output list of components
+		*/
 		template <typename T>
 		void find(std::vector<std::shared_ptr<T>>& _out) 
 		{
@@ -41,21 +70,33 @@ namespace northengine {
 			}
 		}
 
+
+		/**
+		* Gets the time between this frame and last frame.
+		* 
+		* \return DeltaTime as a float
+		*/
 		float getDeltaTime();
 
+
+		/**
+		* Gets the resources member variable.
+		* 
+		* \return ptr to m_resources
+		*/
 		std::shared_ptr<Resources> getResources();
 
 	private:
-		std::weak_ptr<Core> m_self;
-		bool m_running;
+		std::weak_ptr<Core> m_self;///< pointer to self to pass down to new entities that are added to core
+		bool m_running;///< status of the core loop
 
-		std::vector<std::shared_ptr<Entity> > m_entities;
+		std::vector<std::shared_ptr<Entity> > m_entities; ///< vector of all entities currently in your game
 
-		std::shared_ptr<Resources> m_resources;
+		std::shared_ptr<Resources> m_resources;///< resource manager
 
-		SDL_Window* m_window;
-		SDL_GLContext m_context;
+		SDL_Window* m_window;///< SDL window
+		SDL_GLContext m_context;///< SDL context
 
-		float deltaT;
+		float deltaT;///< Delta time (time between this frame and last frame) 
 	};
 }

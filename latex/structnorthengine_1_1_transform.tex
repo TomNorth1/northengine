@@ -1,0 +1,150 @@
+\hypertarget{structnorthengine_1_1_transform}{}\doxysection{northengine\+::Transform Struct Reference}
+\label{structnorthengine_1_1_transform}\index{northengine::Transform@{northengine::Transform}}
+
+
+{\ttfamily \#include $<$Transform.\+h$>$}
+
+Inheritance diagram for northengine\+::Transform\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structnorthengine_1_1_transform}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structnorthengine_1_1_transform_ada3342e649a873eb9ff73f23bba3f9c2}{Transform}} ()
+\item 
+\mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{rend\+::mat4}} \mbox{\hyperlink{structnorthengine_1_1_transform_abf572c798ee7563a9292d0464391cd71}{get\+Model}} ()
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_transform_a8e7f5fa00f2442b633e1254b40510012}{set\+Position}} (const \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \&\+\_\+position)
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_transform_a82ad16da492a2d662a2b9b96b6ef12be}{set\+Rotation}} (const \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \&\+\_\+rotation)
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_transform_a105ab58b2a3fe2f7f2ce7640471c3df3}{set\+Scale}} (const \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \&\+\_\+scale)
+\item 
+\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \mbox{\hyperlink{structnorthengine_1_1_transform_a8d0e620c6728e99ed24fcbb199bd9642}{get\+Position}} ()
+\item 
+\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \mbox{\hyperlink{structnorthengine_1_1_transform_a9bdcddf13a0d03921f643e7688fc4fd3}{get\+Rotation}} ()
+\item 
+\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \mbox{\hyperlink{structnorthengine_1_1_transform_acad44758bd0156032d4f229d8832de34}{get\+Scale}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{structnorthengine_1_1_component}{northengine\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{on\+Tick}} ()
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}{on\+Display}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structnorthengine_1_1_component_af3a47e84c6a254cb2e156f57b1f185fe}{get\+Entity}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \mbox{\hyperlink{structnorthengine_1_1_transform_a0f856b61a5d9c91613a31da439b112d5}{m\+\_\+position}}
+\begin{DoxyCompactList}\small\item\em X, Y, Z location of \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \mbox{\hyperlink{structnorthengine_1_1_transform_a911d10072000780501089576fcf742ad}{m\+\_\+rotation}}
+\begin{DoxyCompactList}\small\item\em Rotation of \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} in euler angles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \mbox{\hyperlink{structnorthengine_1_1_transform_ad07f41013018a5d73f31accb8ca26ac6}{m\+\_\+scale}}
+\begin{DoxyCompactList}\small\item\em Scale of \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{structnorthengine_1_1_component}{Component}} providing position information of the entity 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_transform_ada3342e649a873eb9ff73f23bba3f9c2}\label{structnorthengine_1_1_transform_ada3342e649a873eb9ff73f23bba3f9c2}} 
+\index{northengine::Transform@{northengine::Transform}!Transform@{Transform}}
+\index{Transform@{Transform}!northengine::Transform@{northengine::Transform}}
+\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}}
+{\footnotesize\ttfamily northengine\+::\+Transform\+::\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+defualt constructor to make sure scale isnt 0 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_transform_abf572c798ee7563a9292d0464391cd71}\label{structnorthengine_1_1_transform_abf572c798ee7563a9292d0464391cd71}} 
+\index{northengine::Transform@{northengine::Transform}!getModel@{getModel}}
+\index{getModel@{getModel}!northengine::Transform@{northengine::Transform}}
+\doxysubsubsection{\texorpdfstring{getModel()}{getModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{rend\+::mat4}} northengine\+::\+Transform\+::get\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Generate the model matrix based on the position, rotation and scale.
+
+\begin{DoxyReturn}{Returns}
+The generated model matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structnorthengine_1_1_transform_a8d0e620c6728e99ed24fcbb199bd9642}\label{structnorthengine_1_1_transform_a8d0e620c6728e99ed24fcbb199bd9642}} 
+\index{northengine::Transform@{northengine::Transform}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!northengine::Transform@{northengine::Transform}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} northengine\+::\+Transform\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structnorthengine_1_1_transform_a9bdcddf13a0d03921f643e7688fc4fd3}\label{structnorthengine_1_1_transform_a9bdcddf13a0d03921f643e7688fc4fd3}} 
+\index{northengine::Transform@{northengine::Transform}!getRotation@{getRotation}}
+\index{getRotation@{getRotation}!northengine::Transform@{northengine::Transform}}
+\doxysubsubsection{\texorpdfstring{getRotation()}{getRotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} northengine\+::\+Transform\+::get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structnorthengine_1_1_transform_acad44758bd0156032d4f229d8832de34}\label{structnorthengine_1_1_transform_acad44758bd0156032d4f229d8832de34}} 
+\index{northengine::Transform@{northengine::Transform}!getScale@{getScale}}
+\index{getScale@{getScale}!northengine::Transform@{northengine::Transform}}
+\doxysubsubsection{\texorpdfstring{getScale()}{getScale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} northengine\+::\+Transform\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structnorthengine_1_1_transform_a8e7f5fa00f2442b633e1254b40510012}\label{structnorthengine_1_1_transform_a8e7f5fa00f2442b633e1254b40510012}} 
+\index{northengine::Transform@{northengine::Transform}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!northengine::Transform@{northengine::Transform}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void northengine\+::\+Transform\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \&}]{\+\_\+position }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structnorthengine_1_1_transform_a82ad16da492a2d662a2b9b96b6ef12be}\label{structnorthengine_1_1_transform_a82ad16da492a2d662a2b9b96b6ef12be}} 
+\index{northengine::Transform@{northengine::Transform}!setRotation@{setRotation}}
+\index{setRotation@{setRotation}!northengine::Transform@{northengine::Transform}}
+\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}}
+{\footnotesize\ttfamily void northengine\+::\+Transform\+::set\+Rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \&}]{\+\_\+rotation }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structnorthengine_1_1_transform_a105ab58b2a3fe2f7f2ce7640471c3df3}\label{structnorthengine_1_1_transform_a105ab58b2a3fe2f7f2ce7640471c3df3}} 
+\index{northengine::Transform@{northengine::Transform}!setScale@{setScale}}
+\index{setScale@{setScale}!northengine::Transform@{northengine::Transform}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}}
+{\footnotesize\ttfamily void northengine\+::\+Transform\+::set\+Scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \&}]{\+\_\+scale }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_transform_a0f856b61a5d9c91613a31da439b112d5}\label{structnorthengine_1_1_transform_a0f856b61a5d9c91613a31da439b112d5}} 
+\index{northengine::Transform@{northengine::Transform}!m\_position@{m\_position}}
+\index{m\_position@{m\_position}!northengine::Transform@{northengine::Transform}}
+\doxysubsubsection{\texorpdfstring{m\_position}{m\_position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} northengine\+::\+Transform\+::m\+\_\+position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+X, Y, Z location of \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}}. 
+
+\mbox{\Hypertarget{structnorthengine_1_1_transform_a911d10072000780501089576fcf742ad}\label{structnorthengine_1_1_transform_a911d10072000780501089576fcf742ad}} 
+\index{northengine::Transform@{northengine::Transform}!m\_rotation@{m\_rotation}}
+\index{m\_rotation@{m\_rotation}!northengine::Transform@{northengine::Transform}}
+\doxysubsubsection{\texorpdfstring{m\_rotation}{m\_rotation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} northengine\+::\+Transform\+::m\+\_\+rotation\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rotation of \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} in euler angles. 
+
+\mbox{\Hypertarget{structnorthengine_1_1_transform_ad07f41013018a5d73f31accb8ca26ac6}\label{structnorthengine_1_1_transform_ad07f41013018a5d73f31accb8ca26ac6}} 
+\index{northengine::Transform@{northengine::Transform}!m\_scale@{m\_scale}}
+\index{m\_scale@{m\_scale}!northengine::Transform@{northengine::Transform}}
+\doxysubsubsection{\texorpdfstring{m\_scale}{m\_scale}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} northengine\+::\+Transform\+::m\+\_\+scale\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Scale of \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}}. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/northengine/\mbox{\hyperlink{_transform_8h}{Transform.\+h}}\item 
+src/northengine/\mbox{\hyperlink{_transform_8cpp}{Transform.\+cpp}}\end{DoxyCompactItemize}

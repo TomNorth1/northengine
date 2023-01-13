@@ -1,0 +1,61 @@
+\hypertarget{structnorthengine_1_1_camera}{}\doxysection{northengine\+::Camera Struct Reference}
+\label{structnorthengine_1_1_camera}\index{northengine::Camera@{northengine::Camera}}
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+Inheritance diagram for northengine\+::Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structnorthengine_1_1_camera}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{rend\+::mat4}} \mbox{\hyperlink{structnorthengine_1_1_camera_ac15b61a748cdfc53aabbe5398402f5d0}{get\+View}} ()
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_camera_a302fdc2066f691565399d246d13282a0}{on\+Tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{structnorthengine_1_1_component}{northengine\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{on\+Tick}} ()
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}{on\+Display}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structnorthengine_1_1_component_af3a47e84c6a254cb2e156f57b1f185fe}{get\+Entity}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{structnorthengine_1_1_camera}{Camera}} component where you can get the view matrix 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_camera_ac15b61a748cdfc53aabbe5398402f5d0}\label{structnorthengine_1_1_camera_ac15b61a748cdfc53aabbe5398402f5d0}} 
+\index{northengine::Camera@{northengine::Camera}!getView@{getView}}
+\index{getView@{getView}!northengine::Camera@{northengine::Camera}}
+\doxysubsubsection{\texorpdfstring{getView()}{getView()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{rend\+::mat4}} northengine\+::\+Camera\+::get\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Generate view matrix from cameras transform component.
+
+\begin{DoxyReturn}{Returns}
+The generated view matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structnorthengine_1_1_camera_a302fdc2066f691565399d246d13282a0}\label{structnorthengine_1_1_camera_a302fdc2066f691565399d246d13282a0}} 
+\index{northengine::Camera@{northengine::Camera}!onTick@{onTick}}
+\index{onTick@{onTick}!northengine::Camera@{northengine::Camera}}
+\doxysubsubsection{\texorpdfstring{onTick()}{onTick()}}
+{\footnotesize\ttfamily void northengine\+::\+Camera\+::on\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+update audio listener position 
+
+Reimplemented from \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{northengine\+::\+Component}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/northengine/\mbox{\hyperlink{_camera_8h}{Camera.\+h}}\item 
+src/northengine/\mbox{\hyperlink{_camera_8cpp}{Camera.\+cpp}}\end{DoxyCompactItemize}

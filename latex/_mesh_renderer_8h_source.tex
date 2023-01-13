@@ -1,0 +1,35 @@
+\hypertarget{_mesh_renderer_8h_source}{}\doxysection{Mesh\+Renderer.\+h}
+\label{_mesh_renderer_8h_source}\index{src/northengine/MeshRenderer.h@{src/northengine/MeshRenderer.h}}
+\mbox{\hyperlink{_mesh_renderer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{rend_8h}{rend/rend.h}}>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_string_8h}{rend/sys/String.h}}>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{rend_2_texture_8h}{Texture.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{rend_2_model_8h}{Model.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacenorthengine}{northengine}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnorthengine_1_1_mesh_renderer}{MeshRenderer}}\ :\ \mbox{\hyperlink{structnorthengine_1_1_component}{Component}}}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_adb8795695dc68ed90a7ebf80ca5f6991}{MeshRenderer}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_aed82c8d7a0302fefade13225c116f018}{setResources}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structsys_1_1_string}{sys::String}}\ \_texPath,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structsys_1_1_string}{sys::String}}\ \_modPath);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structrend_1_1_mesh}{rend::Mesh}}\ \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_a4c45beb0fbfc75d9bd72ea62911e5dac}{m\_mesh}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::shared\_ptr<Model>\ \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_a2a8ee731f47b3b426cd330f11f9533f5}{m\_model}};\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structrend_1_1_shader}{rend::Shader}}\ \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_a376869e274405759ffaf32839029f90d}{m\_shader}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ std::shared\_ptr<Texture>\ \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_a9aefb763c2938b04016952ce6d8d9510}{m\_texture}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structsys_1_1_string}{sys::String}}\ \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_a01047fcf9b6310f334781d9f10fdca9c}{texPath}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structsys_1_1_string}{sys::String}}\ \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_ab5bc779bca56be35db6ba09b7fe9335a}{modPath}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_aa677a4e17c1e98caaec4b4c288b52488}{onDisplay}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}

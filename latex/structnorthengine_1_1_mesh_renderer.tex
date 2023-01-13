@@ -1,0 +1,145 @@
+\hypertarget{structnorthengine_1_1_mesh_renderer}{}\doxysection{northengine\+::Mesh\+Renderer Struct Reference}
+\label{structnorthengine_1_1_mesh_renderer}\index{northengine::MeshRenderer@{northengine::MeshRenderer}}
+
+
+{\ttfamily \#include $<$Mesh\+Renderer.\+h$>$}
+
+Inheritance diagram for northengine\+::Mesh\+Renderer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structnorthengine_1_1_mesh_renderer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_adb8795695dc68ed90a7ebf80ca5f6991}{Mesh\+Renderer}} ()
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_aed82c8d7a0302fefade13225c116f018}{set\+Resources}} (const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \+\_\+tex\+Path, const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \+\_\+mod\+Path)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{structnorthengine_1_1_component}{northengine\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{on\+Tick}} ()
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}{on\+Display}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structnorthengine_1_1_component_af3a47e84c6a254cb2e156f57b1f185fe}{get\+Entity}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_aa677a4e17c1e98caaec4b4c288b52488}{on\+Display}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrend_1_1_mesh}{rend\+::\+Mesh}} \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_a4c45beb0fbfc75d9bd72ea62911e5dac}{m\+\_\+mesh}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_model}{Model}} $>$ \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_a2a8ee731f47b3b426cd330f11f9533f5}{m\+\_\+model}}
+\begin{DoxyCompactList}\small\item\em model resource \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structrend_1_1_shader}{rend\+::\+Shader}} \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_a376869e274405759ffaf32839029f90d}{m\+\_\+shader}}
+\begin{DoxyCompactList}\small\item\em shader to use \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_texture}{Texture}} $>$ \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_a9aefb763c2938b04016952ce6d8d9510}{m\+\_\+texture}}
+\begin{DoxyCompactList}\small\item\em texture resource \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_a01047fcf9b6310f334781d9f10fdca9c}{tex\+Path}}
+\item 
+\mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_ab5bc779bca56be35db6ba09b7fe9335a}{mod\+Path}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{structnorthengine_1_1_component}{Component}} responsible for renderering a mesh to screen 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_mesh_renderer_adb8795695dc68ed90a7ebf80ca5f6991}\label{structnorthengine_1_1_mesh_renderer_adb8795695dc68ed90a7ebf80ca5f6991}} 
+\index{northengine::MeshRenderer@{northengine::MeshRenderer}!MeshRenderer@{MeshRenderer}}
+\index{MeshRenderer@{MeshRenderer}!northengine::MeshRenderer@{northengine::MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{MeshRenderer()}{MeshRenderer()}}
+{\footnotesize\ttfamily northengine\+::\+Mesh\+Renderer\+::\+Mesh\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+default constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_mesh_renderer_aa677a4e17c1e98caaec4b4c288b52488}\label{structnorthengine_1_1_mesh_renderer_aa677a4e17c1e98caaec4b4c288b52488}} 
+\index{northengine::MeshRenderer@{northengine::MeshRenderer}!onDisplay@{onDisplay}}
+\index{onDisplay@{onDisplay}!northengine::MeshRenderer@{northengine::MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{onDisplay()}{onDisplay()}}
+{\footnotesize\ttfamily void northengine\+::\+Mesh\+Renderer\+::on\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+displays the model to the screen 
+
+Reimplemented from \mbox{\hyperlink{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}{northengine\+::\+Component}}.
+
+\mbox{\Hypertarget{structnorthengine_1_1_mesh_renderer_aed82c8d7a0302fefade13225c116f018}\label{structnorthengine_1_1_mesh_renderer_aed82c8d7a0302fefade13225c116f018}} 
+\index{northengine::MeshRenderer@{northengine::MeshRenderer}!setResources@{setResources}}
+\index{setResources@{setResources}!northengine::MeshRenderer@{northengine::MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{setResources()}{setResources()}}
+{\footnotesize\ttfamily void northengine\+::\+Mesh\+Renderer\+::set\+Resources (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}}}]{\+\_\+tex\+Path,  }\item[{const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}}}]{\+\_\+mod\+Path }\end{DoxyParamCaption})}
+
+Loads texture and model resource from the resource manager
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+tex\+Path} & path to the desired texture file\\
+\hline
+{\em \+\_\+mod\+Path} & path to the desired model file \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_mesh_renderer_a4c45beb0fbfc75d9bd72ea62911e5dac}\label{structnorthengine_1_1_mesh_renderer_a4c45beb0fbfc75d9bd72ea62911e5dac}} 
+\index{northengine::MeshRenderer@{northengine::MeshRenderer}!m\_mesh@{m\_mesh}}
+\index{m\_mesh@{m\_mesh}!northengine::MeshRenderer@{northengine::MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{m\_mesh}{m\_mesh}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrend_1_1_mesh}{rend\+::\+Mesh}} northengine\+::\+Mesh\+Renderer\+::m\+\_\+mesh\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structnorthengine_1_1_mesh_renderer_a2a8ee731f47b3b426cd330f11f9533f5}\label{structnorthengine_1_1_mesh_renderer_a2a8ee731f47b3b426cd330f11f9533f5}} 
+\index{northengine::MeshRenderer@{northengine::MeshRenderer}!m\_model@{m\_model}}
+\index{m\_model@{m\_model}!northengine::MeshRenderer@{northengine::MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{m\_model}{m\_model}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structnorthengine_1_1_model}{Model}}$>$ northengine\+::\+Mesh\+Renderer\+::m\+\_\+model\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+model resource 
+
+\mbox{\Hypertarget{structnorthengine_1_1_mesh_renderer_a376869e274405759ffaf32839029f90d}\label{structnorthengine_1_1_mesh_renderer_a376869e274405759ffaf32839029f90d}} 
+\index{northengine::MeshRenderer@{northengine::MeshRenderer}!m\_shader@{m\_shader}}
+\index{m\_shader@{m\_shader}!northengine::MeshRenderer@{northengine::MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{m\_shader}{m\_shader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrend_1_1_shader}{rend\+::\+Shader}} northengine\+::\+Mesh\+Renderer\+::m\+\_\+shader\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+shader to use 
+
+\mbox{\Hypertarget{structnorthengine_1_1_mesh_renderer_a9aefb763c2938b04016952ce6d8d9510}\label{structnorthengine_1_1_mesh_renderer_a9aefb763c2938b04016952ce6d8d9510}} 
+\index{northengine::MeshRenderer@{northengine::MeshRenderer}!m\_texture@{m\_texture}}
+\index{m\_texture@{m\_texture}!northengine::MeshRenderer@{northengine::MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{m\_texture}{m\_texture}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structnorthengine_1_1_texture}{Texture}}$>$ northengine\+::\+Mesh\+Renderer\+::m\+\_\+texture\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+texture resource 
+
+\mbox{\Hypertarget{structnorthengine_1_1_mesh_renderer_ab5bc779bca56be35db6ba09b7fe9335a}\label{structnorthengine_1_1_mesh_renderer_ab5bc779bca56be35db6ba09b7fe9335a}} 
+\index{northengine::MeshRenderer@{northengine::MeshRenderer}!modPath@{modPath}}
+\index{modPath@{modPath}!northengine::MeshRenderer@{northengine::MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{modPath}{modPath}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} northengine\+::\+Mesh\+Renderer\+::mod\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structnorthengine_1_1_mesh_renderer_a01047fcf9b6310f334781d9f10fdca9c}\label{structnorthengine_1_1_mesh_renderer_a01047fcf9b6310f334781d9f10fdca9c}} 
+\index{northengine::MeshRenderer@{northengine::MeshRenderer}!texPath@{texPath}}
+\index{texPath@{texPath}!northengine::MeshRenderer@{northengine::MeshRenderer}}
+\doxysubsubsection{\texorpdfstring{texPath}{texPath}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} northengine\+::\+Mesh\+Renderer\+::tex\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/northengine/\mbox{\hyperlink{_mesh_renderer_8h}{Mesh\+Renderer.\+h}}\item 
+src/northengine/\mbox{\hyperlink{_mesh_renderer_8cpp}{Mesh\+Renderer.\+cpp}}\end{DoxyCompactItemize}

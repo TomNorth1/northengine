@@ -1,0 +1,105 @@
+\hypertarget{structnorthengine_1_1_audio_clip}{}\doxysection{northengine\+::Audio\+Clip Struct Reference}
+\label{structnorthengine_1_1_audio_clip}\index{northengine::AudioClip@{northengine::AudioClip}}
+
+
+{\ttfamily \#include $<$Audio\+Clip.\+h$>$}
+
+Inheritance diagram for northengine\+::Audio\+Clip\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structnorthengine_1_1_audio_clip}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_audio_clip_a8e1c1bba1872d2e6073544e21770145f}{on\+Load}} ()
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_audio_clip_a0d80482d1b7032aa30225f6c18ec1b13}{load\+\_\+ogg}} (const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&\+\_\+path, std\+::vector$<$ unsigned char $>$ \&\+\_\+buffer, ALenum \&\+\_\+format, ALsizei \&\+\_\+freq)
+\item 
+ALenum \mbox{\hyperlink{structnorthengine_1_1_audio_clip_a2624781261e48a3212dd93ead3817427}{get\+Format}} ()
+\item 
+ALsizei \mbox{\hyperlink{structnorthengine_1_1_audio_clip_addfbf8a0f68dd3deac30b760724e37dc}{get\+Freq}} ()
+\item 
+std\+::vector$<$ unsigned char $>$ \mbox{\hyperlink{structnorthengine_1_1_audio_clip_a831314bc3cf1c998cddf9405dc565454}{get\+Buffer\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{structnorthengine_1_1_resource}{northengine\+::\+Resource}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_resource_ace9e4b4bc4959e8f50f9feaa3fcd1b5f}{on\+Load}} ()=0
+\item 
+\mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \mbox{\hyperlink{structnorthengine_1_1_resource_a3f8b0c5b763aa939a465aa7316902697}{get\+Path}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ALenum \mbox{\hyperlink{structnorthengine_1_1_audio_clip_af5f4339d8b983efa613fc402f32ba034}{format}}
+\item 
+ALsizei \mbox{\hyperlink{structnorthengine_1_1_audio_clip_ad7b659fdbc053342c558fbed3407243d}{freq}}
+\item 
+std\+::vector$<$ unsigned char $>$ \mbox{\hyperlink{structnorthengine_1_1_audio_clip_a1c65dc33df132c59d1a7a4f6f7948247}{buffer\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_audio_clip_a831314bc3cf1c998cddf9405dc565454}\label{structnorthengine_1_1_audio_clip_a831314bc3cf1c998cddf9405dc565454}} 
+\index{northengine::AudioClip@{northengine::AudioClip}!getBufferData@{getBufferData}}
+\index{getBufferData@{getBufferData}!northengine::AudioClip@{northengine::AudioClip}}
+\doxysubsubsection{\texorpdfstring{getBufferData()}{getBufferData()}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned char $>$ northengine\+::\+Audio\+Clip\+::get\+Buffer\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structnorthengine_1_1_audio_clip_a2624781261e48a3212dd93ead3817427}\label{structnorthengine_1_1_audio_clip_a2624781261e48a3212dd93ead3817427}} 
+\index{northengine::AudioClip@{northengine::AudioClip}!getFormat@{getFormat}}
+\index{getFormat@{getFormat}!northengine::AudioClip@{northengine::AudioClip}}
+\doxysubsubsection{\texorpdfstring{getFormat()}{getFormat()}}
+{\footnotesize\ttfamily ALenum northengine\+::\+Audio\+Clip\+::get\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structnorthengine_1_1_audio_clip_addfbf8a0f68dd3deac30b760724e37dc}\label{structnorthengine_1_1_audio_clip_addfbf8a0f68dd3deac30b760724e37dc}} 
+\index{northengine::AudioClip@{northengine::AudioClip}!getFreq@{getFreq}}
+\index{getFreq@{getFreq}!northengine::AudioClip@{northengine::AudioClip}}
+\doxysubsubsection{\texorpdfstring{getFreq()}{getFreq()}}
+{\footnotesize\ttfamily ALsizei northengine\+::\+Audio\+Clip\+::get\+Freq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structnorthengine_1_1_audio_clip_a0d80482d1b7032aa30225f6c18ec1b13}\label{structnorthengine_1_1_audio_clip_a0d80482d1b7032aa30225f6c18ec1b13}} 
+\index{northengine::AudioClip@{northengine::AudioClip}!load\_ogg@{load\_ogg}}
+\index{load\_ogg@{load\_ogg}!northengine::AudioClip@{northengine::AudioClip}}
+\doxysubsubsection{\texorpdfstring{load\_ogg()}{load\_ogg()}}
+{\footnotesize\ttfamily void northengine\+::\+Audio\+Clip\+::load\+\_\+ogg (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&}]{\+\_\+path,  }\item[{std\+::vector$<$ unsigned char $>$ \&}]{\+\_\+buffer,  }\item[{ALenum \&}]{\+\_\+format,  }\item[{ALsizei \&}]{\+\_\+freq }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structnorthengine_1_1_audio_clip_a8e1c1bba1872d2e6073544e21770145f}\label{structnorthengine_1_1_audio_clip_a8e1c1bba1872d2e6073544e21770145f}} 
+\index{northengine::AudioClip@{northengine::AudioClip}!onLoad@{onLoad}}
+\index{onLoad@{onLoad}!northengine::AudioClip@{northengine::AudioClip}}
+\doxysubsubsection{\texorpdfstring{onLoad()}{onLoad()}}
+{\footnotesize\ttfamily void northengine\+::\+Audio\+Clip\+::on\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+event is called when resource is loaded in to the resource manager 
+
+Implements \mbox{\hyperlink{structnorthengine_1_1_resource_ace9e4b4bc4959e8f50f9feaa3fcd1b5f}{northengine\+::\+Resource}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_audio_clip_a1c65dc33df132c59d1a7a4f6f7948247}\label{structnorthengine_1_1_audio_clip_a1c65dc33df132c59d1a7a4f6f7948247}} 
+\index{northengine::AudioClip@{northengine::AudioClip}!bufferData@{bufferData}}
+\index{bufferData@{bufferData}!northengine::AudioClip@{northengine::AudioClip}}
+\doxysubsubsection{\texorpdfstring{bufferData}{bufferData}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned char$>$ northengine\+::\+Audio\+Clip\+::buffer\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structnorthengine_1_1_audio_clip_af5f4339d8b983efa613fc402f32ba034}\label{structnorthengine_1_1_audio_clip_af5f4339d8b983efa613fc402f32ba034}} 
+\index{northengine::AudioClip@{northengine::AudioClip}!format@{format}}
+\index{format@{format}!northengine::AudioClip@{northengine::AudioClip}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily ALenum northengine\+::\+Audio\+Clip\+::format\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structnorthengine_1_1_audio_clip_ad7b659fdbc053342c558fbed3407243d}\label{structnorthengine_1_1_audio_clip_ad7b659fdbc053342c558fbed3407243d}} 
+\index{northengine::AudioClip@{northengine::AudioClip}!freq@{freq}}
+\index{freq@{freq}!northengine::AudioClip@{northengine::AudioClip}}
+\doxysubsubsection{\texorpdfstring{freq}{freq}}
+{\footnotesize\ttfamily ALsizei northengine\+::\+Audio\+Clip\+::freq\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/northengine/\mbox{\hyperlink{_audio_clip_8h}{Audio\+Clip.\+h}}\item 
+src/northengine/\mbox{\hyperlink{_audio_clip_8cpp}{Audio\+Clip.\+cpp}}\end{DoxyCompactItemize}

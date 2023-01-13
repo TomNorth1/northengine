@@ -1,0 +1,38 @@
+\hypertarget{_keyboard_8h_source}{}\doxysection{Keyboard.\+h}
+\label{_keyboard_8h_source}\index{src/northengine/Keyboard.h@{src/northengine/Keyboard.h}}
+\mbox{\hyperlink{_keyboard_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}SDL2/SDL.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacenorthengine}{northengine}}\ }
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnorthengine_1_1_key_binding}{KeyBinding}}\ }
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnorthengine_1_1_key_binding}{KeyBinding}}(SDL\_Keycode\ \_key,\ std::function<\textcolor{keywordtype}{void}()>\ \_funcDown\ ,\ std::function<\textcolor{keywordtype}{void}()>\ \_funcUp);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ SDL\_Keycode\ \mbox{\hyperlink{structnorthengine_1_1_key_binding_a077a173a39d74ae80255111adc0bceb6}{getKey}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_key_binding_a2253cefc28d8d2d4bb9ff8348dbdc62b}{callDownFunc}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_key_binding_a584cb6469808acd3634ceb2a0496dcf9}{callUpFunc}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ SDL\_Keycode\ \mbox{\hyperlink{structnorthengine_1_1_key_binding_a2a402d64ec488558f66b55169eee7a57}{m\_key}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::function<void()>\ \mbox{\hyperlink{structnorthengine_1_1_key_binding_ab340ad11730c7e6f29de51913fbdfd39}{m\_funcDown}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::function<void()>\ \mbox{\hyperlink{structnorthengine_1_1_key_binding_a5f1faf4ef91b66780535efc0b0da0e7f}{m\_funcUp}};}
+\DoxyCodeLine{00030\ \ \ \ \ \};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnorthengine_1_1_input_handler}{InputHandler}}}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_input_handler_a1b6bb2186af01b1939ec8ff27a3e4b15}{addBinding}}(SDL\_Keycode\ \_key,\ std::function<\textcolor{keywordtype}{void}()>\ \_funcDown,\ std::function<\textcolor{keywordtype}{void}()>\ \_funcUp);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_input_handler_af3a8c292aeabe82e3d36cf4d6c77692f}{handleKeyDownEvent}}(SDL\_Event\ \&e);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_input_handler_ac8d499131cb25e468a5b563d6c40576d}{handleKeyUpEvent}}(SDL\_Event\ \&e);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<KeyBinding>>\ \mbox{\hyperlink{structnorthengine_1_1_input_handler_adad7c0494a3bfa177dbe664c436a58bc}{m\_bindings}};}
+\DoxyCodeLine{00061\ \ \ \ \ \};}
+\DoxyCodeLine{00062\ \}}
+
+\end{DoxyCode}

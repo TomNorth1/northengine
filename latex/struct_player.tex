@@ -9,20 +9,126 @@ Inheritance diagram for Player\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{struct_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}} ()
+\item 
 void \mbox{\hyperlink{struct_player_aa6a9d06e481e62626da52db9a6c79023}{on\+Tick}} ()
+\item 
+void \mbox{\hyperlink{struct_player_a6b75248d0113094217863fea15be845f}{move\+Forward\+Pressed}} ()
+\item 
+void \mbox{\hyperlink{struct_player_a06bcd002fb144d62c0d28c91d04c1a83}{move\+Forward\+Released}} ()
+\item 
+void \mbox{\hyperlink{struct_player_a749dec4aa802d32c8cc24c91c14f50e2}{move\+Backward\+Pressed}} ()
+\item 
+void \mbox{\hyperlink{struct_player_aa66faedddbc0118f319fceb58ff66604}{move\+Backward\+Released}} ()
+\item 
+void \mbox{\hyperlink{struct_player_a4de28e7302272c59bdd6bdb62ba4c82c}{move\+Right\+Pressed}} ()
+\item 
+void \mbox{\hyperlink{struct_player_af1410de1740611979d385f7353e2b044}{move\+Right\+Released}} ()
+\item 
+void \mbox{\hyperlink{struct_player_ade9cd9a3a88595682a4e655e52efdfce}{move\+Left\+Pressed}} ()
+\item 
+void \mbox{\hyperlink{struct_player_a30155166c615448d72cf2f5c5d647302}{move\+Left\+Released}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{structnorthengine_1_1_component}{northengine\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{on\+Tick}} ()
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}{on\+Display}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structnorthengine_1_1_component_af3a47e84c6a254cb2e156f57b1f185fe}{get\+Entity}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{struct_player_a82806e9ab7392bb7f33d360aaba874fe}{m\+\_\+angle}}
+\item 
+\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \mbox{\hyperlink{struct_player_a4b723edf8ac5c9409cf4cb2493ba5171}{velocity}}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}\label{struct_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_player_a749dec4aa802d32c8cc24c91c14f50e2}\label{struct_player_a749dec4aa802d32c8cc24c91c14f50e2}} 
+\index{Player@{Player}!moveBackwardPressed@{moveBackwardPressed}}
+\index{moveBackwardPressed@{moveBackwardPressed}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{moveBackwardPressed()}{moveBackwardPressed()}}
+{\footnotesize\ttfamily void Player\+::move\+Backward\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_player_aa66faedddbc0118f319fceb58ff66604}\label{struct_player_aa66faedddbc0118f319fceb58ff66604}} 
+\index{Player@{Player}!moveBackwardReleased@{moveBackwardReleased}}
+\index{moveBackwardReleased@{moveBackwardReleased}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{moveBackwardReleased()}{moveBackwardReleased()}}
+{\footnotesize\ttfamily void Player\+::move\+Backward\+Released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_player_a6b75248d0113094217863fea15be845f}\label{struct_player_a6b75248d0113094217863fea15be845f}} 
+\index{Player@{Player}!moveForwardPressed@{moveForwardPressed}}
+\index{moveForwardPressed@{moveForwardPressed}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{moveForwardPressed()}{moveForwardPressed()}}
+{\footnotesize\ttfamily void Player\+::move\+Forward\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_player_a06bcd002fb144d62c0d28c91d04c1a83}\label{struct_player_a06bcd002fb144d62c0d28c91d04c1a83}} 
+\index{Player@{Player}!moveForwardReleased@{moveForwardReleased}}
+\index{moveForwardReleased@{moveForwardReleased}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{moveForwardReleased()}{moveForwardReleased()}}
+{\footnotesize\ttfamily void Player\+::move\+Forward\+Released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_player_ade9cd9a3a88595682a4e655e52efdfce}\label{struct_player_ade9cd9a3a88595682a4e655e52efdfce}} 
+\index{Player@{Player}!moveLeftPressed@{moveLeftPressed}}
+\index{moveLeftPressed@{moveLeftPressed}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{moveLeftPressed()}{moveLeftPressed()}}
+{\footnotesize\ttfamily void Player\+::move\+Left\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_player_a30155166c615448d72cf2f5c5d647302}\label{struct_player_a30155166c615448d72cf2f5c5d647302}} 
+\index{Player@{Player}!moveLeftReleased@{moveLeftReleased}}
+\index{moveLeftReleased@{moveLeftReleased}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{moveLeftReleased()}{moveLeftReleased()}}
+{\footnotesize\ttfamily void Player\+::move\+Left\+Released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_player_a4de28e7302272c59bdd6bdb62ba4c82c}\label{struct_player_a4de28e7302272c59bdd6bdb62ba4c82c}} 
+\index{Player@{Player}!moveRightPressed@{moveRightPressed}}
+\index{moveRightPressed@{moveRightPressed}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{moveRightPressed()}{moveRightPressed()}}
+{\footnotesize\ttfamily void Player\+::move\+Right\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_player_af1410de1740611979d385f7353e2b044}\label{struct_player_af1410de1740611979d385f7353e2b044}} 
+\index{Player@{Player}!moveRightReleased@{moveRightReleased}}
+\index{moveRightReleased@{moveRightReleased}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{moveRightReleased()}{moveRightReleased()}}
+{\footnotesize\ttfamily void Player\+::move\+Right\+Released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{struct_player_aa6a9d06e481e62626da52db9a6c79023}\label{struct_player_aa6a9d06e481e62626da52db9a6c79023}} 
 \index{Player@{Player}!onTick@{onTick}}
 \index{onTick@{onTick}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{onTick()}{onTick()}}
 {\footnotesize\ttfamily void Player\+::on\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
-
+virtual function where you would write functionality that needs to happen every frame 
 
 Reimplemented from \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{northengine\+::\+Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_player_a82806e9ab7392bb7f33d360aaba874fe}\label{struct_player_a82806e9ab7392bb7f33d360aaba874fe}} 
+\index{Player@{Player}!m\_angle@{m\_angle}}
+\index{m\_angle@{m\_angle}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{m\_angle}{m\_angle}}
+{\footnotesize\ttfamily float Player\+::m\+\_\+angle\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{struct_player_a4b723edf8ac5c9409cf4cb2493ba5171}\label{struct_player_a4b723edf8ac5c9409cf4cb2493ba5171}} 
+\index{Player@{Player}!velocity@{velocity}}
+\index{velocity@{velocity}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} Player\+::velocity\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

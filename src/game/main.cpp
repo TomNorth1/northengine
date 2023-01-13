@@ -169,6 +169,10 @@ int main(int argc, char *argv[])
 	core->inputHandler->addBinding(SDLK_LEFT, &leftArrowPressed, &leftArrowReleased);
 	core->inputHandler->addBinding(SDLK_RIGHT, &rightArrowPressed, &rightArrowReleased);
 	core->inputHandler->addBinding(SDLK_SPACE, &spaceBarPressed, &spaceBarReleased);
+	core->inputHandler->addBinding(SDLK_w, &upArrow, &upArrowReleased);
+	core->inputHandler->addBinding(SDLK_s, &downArrow, &downArrowReleased);
+	core->inputHandler->addBinding(SDLK_a, &leftArrowPressed, &leftArrowReleased);
+	core->inputHandler->addBinding(SDLK_d, &rightArrowPressed, &rightArrowReleased);
 	
 	core->start();
 

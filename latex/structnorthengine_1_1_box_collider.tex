@@ -1,0 +1,139 @@
+\hypertarget{structnorthengine_1_1_box_collider}{}\doxysection{northengine\+::Box\+Collider Struct Reference}
+\label{structnorthengine_1_1_box_collider}\index{northengine::BoxCollider@{northengine::BoxCollider}}
+
+
+{\ttfamily \#include $<$Box\+Collider.\+h$>$}
+
+Inheritance diagram for northengine\+::Box\+Collider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structnorthengine_1_1_box_collider}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structnorthengine_1_1_box_collider_a738574dd85eb8d8d2989b2c6e18e924f}{colliding}} (const \mbox{\hyperlink{structnorthengine_1_1_box_collider}{Box\+Collider}} \&\+\_\+other)
+\item 
+bool \mbox{\hyperlink{structnorthengine_1_1_box_collider_a28b135e6951e8561ccd8ba56cf4ff0b3}{colliding}} (\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} position, \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} size)
+\item 
+\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \mbox{\hyperlink{structnorthengine_1_1_box_collider_a2a75647415280b81c36e2ecd51fa256d}{get\+Collision\+Response}} (\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} position, \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} size)
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_box_collider_abfed2631a5d6e6bb493927c936460f18}{set\+Size}} (\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \+\_\+size)
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_box_collider_ae5dc010f0b95b8b9ec0ed2c9ddf91e23}{set\+Offset}} (\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \+\_\+offset)
+\item 
+\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \mbox{\hyperlink{structnorthengine_1_1_box_collider_a5283f0161128203ad2905d055082bcdf}{get\+Size}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{structnorthengine_1_1_component}{northengine\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{on\+Tick}} ()
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}{on\+Display}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structnorthengine_1_1_component_af3a47e84c6a254cb2e156f57b1f185fe}{get\+Entity}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \mbox{\hyperlink{structnorthengine_1_1_box_collider_a6a66d55eba336268750e004819844351}{m\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em size of the \mbox{\hyperlink{structnorthengine_1_1_box_collider}{Box\+Collider}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \mbox{\hyperlink{structnorthengine_1_1_box_collider_a50aae3047902e355577865eafc158628}{m\+\_\+offset}}
+\begin{DoxyCompactList}\small\item\em offset position of \mbox{\hyperlink{structnorthengine_1_1_box_collider}{Box\+Collider}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple box collider component 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_box_collider_a738574dd85eb8d8d2989b2c6e18e924f}\label{structnorthengine_1_1_box_collider_a738574dd85eb8d8d2989b2c6e18e924f}} 
+\index{northengine::BoxCollider@{northengine::BoxCollider}!colliding@{colliding}}
+\index{colliding@{colliding}!northengine::BoxCollider@{northengine::BoxCollider}}
+\doxysubsubsection{\texorpdfstring{colliding()}{colliding()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool northengine\+::\+Box\+Collider\+::colliding (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structnorthengine_1_1_box_collider}{Box\+Collider}} \&}]{\+\_\+other }\end{DoxyParamCaption})}
+
+checks if owning entity is colliding with the \+\_\+other \mbox{\hyperlink{structnorthengine_1_1_box_collider}{Box\+Collider}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+other} & other \mbox{\hyperlink{structnorthengine_1_1_box_collider}{Box\+Collider}} component \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structnorthengine_1_1_box_collider_a28b135e6951e8561ccd8ba56cf4ff0b3}\label{structnorthengine_1_1_box_collider_a28b135e6951e8561ccd8ba56cf4ff0b3}} 
+\index{northengine::BoxCollider@{northengine::BoxCollider}!colliding@{colliding}}
+\index{colliding@{colliding}!northengine::BoxCollider@{northengine::BoxCollider}}
+\doxysubsubsection{\texorpdfstring{colliding()}{colliding()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool northengine\+::\+Box\+Collider\+::colliding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}}}]{position,  }\item[{\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}}}]{size }\end{DoxyParamCaption})}
+
+checks if owning entity is colliding with the \+\_\+other \mbox{\hyperlink{structnorthengine_1_1_box_collider}{Box\+Collider}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Positiion of other \mbox{\hyperlink{structnorthengine_1_1_box_collider}{Box\+Collider}} component \\
+\hline
+{\em size} & Size of the other \mbox{\hyperlink{structnorthengine_1_1_box_collider}{Box\+Collider}} component \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structnorthengine_1_1_box_collider_a2a75647415280b81c36e2ecd51fa256d}\label{structnorthengine_1_1_box_collider_a2a75647415280b81c36e2ecd51fa256d}} 
+\index{northengine::BoxCollider@{northengine::BoxCollider}!getCollisionResponse@{getCollisionResponse}}
+\index{getCollisionResponse@{getCollisionResponse}!northengine::BoxCollider@{northengine::BoxCollider}}
+\doxysubsubsection{\texorpdfstring{getCollisionResponse()}{getCollisionResponse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} northengine\+::\+Box\+Collider\+::get\+Collision\+Response (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}}}]{position,  }\item[{\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}}}]{size }\end{DoxyParamCaption})}
+
+basic kludge collision response
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Positiion of other \mbox{\hyperlink{structnorthengine_1_1_box_collider}{Box\+Collider}} component \\
+\hline
+{\em size} & Size of the other \mbox{\hyperlink{structnorthengine_1_1_box_collider}{Box\+Collider}} component \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structnorthengine_1_1_box_collider_a5283f0161128203ad2905d055082bcdf}\label{structnorthengine_1_1_box_collider_a5283f0161128203ad2905d055082bcdf}} 
+\index{northengine::BoxCollider@{northengine::BoxCollider}!getSize@{getSize}}
+\index{getSize@{getSize}!northengine::BoxCollider@{northengine::BoxCollider}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} northengine\+::\+Box\+Collider\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structnorthengine_1_1_box_collider_ae5dc010f0b95b8b9ec0ed2c9ddf91e23}\label{structnorthengine_1_1_box_collider_ae5dc010f0b95b8b9ec0ed2c9ddf91e23}} 
+\index{northengine::BoxCollider@{northengine::BoxCollider}!setOffset@{setOffset}}
+\index{setOffset@{setOffset}!northengine::BoxCollider@{northengine::BoxCollider}}
+\doxysubsubsection{\texorpdfstring{setOffset()}{setOffset()}}
+{\footnotesize\ttfamily void northengine\+::\+Box\+Collider\+::set\+Offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}}}]{\+\_\+offset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structnorthengine_1_1_box_collider_abfed2631a5d6e6bb493927c936460f18}\label{structnorthengine_1_1_box_collider_abfed2631a5d6e6bb493927c936460f18}} 
+\index{northengine::BoxCollider@{northengine::BoxCollider}!setSize@{setSize}}
+\index{setSize@{setSize}!northengine::BoxCollider@{northengine::BoxCollider}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void northengine\+::\+Box\+Collider\+::set\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}}}]{\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_box_collider_a50aae3047902e355577865eafc158628}\label{structnorthengine_1_1_box_collider_a50aae3047902e355577865eafc158628}} 
+\index{northengine::BoxCollider@{northengine::BoxCollider}!m\_offset@{m\_offset}}
+\index{m\_offset@{m\_offset}!northengine::BoxCollider@{northengine::BoxCollider}}
+\doxysubsubsection{\texorpdfstring{m\_offset}{m\_offset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} northengine\+::\+Box\+Collider\+::m\+\_\+offset\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+offset position of \mbox{\hyperlink{structnorthengine_1_1_box_collider}{Box\+Collider}} 
+
+\mbox{\Hypertarget{structnorthengine_1_1_box_collider_a6a66d55eba336268750e004819844351}\label{structnorthengine_1_1_box_collider_a6a66d55eba336268750e004819844351}} 
+\index{northengine::BoxCollider@{northengine::BoxCollider}!m\_size@{m\_size}}
+\index{m\_size@{m\_size}!northengine::BoxCollider@{northengine::BoxCollider}}
+\doxysubsubsection{\texorpdfstring{m\_size}{m\_size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} northengine\+::\+Box\+Collider\+::m\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+size of the \mbox{\hyperlink{structnorthengine_1_1_box_collider}{Box\+Collider}} 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/northengine/\mbox{\hyperlink{_box_collider_8h}{Box\+Collider.\+h}}\item 
+src/northengine/\mbox{\hyperlink{_box_collider_8cpp}{Box\+Collider.\+cpp}}\end{DoxyCompactItemize}

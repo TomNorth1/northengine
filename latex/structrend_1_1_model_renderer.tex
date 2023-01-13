@@ -17,7 +17,7 @@ Inheritance diagram for rend\+::Model\+Renderer\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{structrend_1_1_model_renderer_a99b5db2bda30e602198e5b7569a5060a}{Model\+Renderer}} (\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_render_texture}{Render\+Texture}} $>$ \+\_\+render\+Texture)
 \item 
-void \mbox{\hyperlink{structrend_1_1_model_renderer_a6c67a77ad88284c6b35766e223b09cba}{model}} (\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_model}{Model}} $>$ \+\_\+model)
+void \mbox{\hyperlink{structrend_1_1_model_renderer_ad09d6b5856c4dd40a3fc13edd0e79c92}{mesh}} (\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_model}{Model}} $>$ \+\_\+model)
 \item 
 void \mbox{\hyperlink{structrend_1_1_model_renderer_a02a673d4cf325fc45bd6529130c69ca3}{animation}} (\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_animation}{Animation}} $>$ \+\_\+animation)
 \item 
@@ -26,6 +26,66 @@ void \mbox{\hyperlink{structrend_1_1_model_renderer_a9216d20517ba917ff963a87d82d
 \mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_part}{Part}} $>$ \mbox{\hyperlink{structrend_1_1_model_renderer_ad8b9584226bca05649f35c1ca292bf54}{intersect}} (const \mbox{\hyperlink{structrend_1_1_ray}{Ray}} \&\+\_\+ray, float \&\+\_\+distance) const
 \item 
 void \mbox{\hyperlink{structrend_1_1_model_renderer_a8d7d61685590d98364b7a9bb8bb997a4}{render}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{structrend_1_1_renderer}{rend\+::\+Renderer}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrend_1_1_renderer_acb1bedcfa793aa72135cd65dadf5d8ab}{Renderer}} (int \+\_\+width, int \+\_\+height)
+\item 
+\mbox{\hyperlink{structrend_1_1_renderer_ab900b34f104cbc79c6766e55d3cc08dc}{Renderer}} (\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_render_texture}{Render\+Texture}} $>$ \+\_\+render\+Texture)
+\item 
+virtual \mbox{\hyperlink{structrend_1_1_renderer_a3761c68dcab04de1b8d4c4924f5cefee}{$\sim$\+Renderer}} ()
+\item 
+virtual void \mbox{\hyperlink{structrend_1_1_renderer_a3588902d7e30986ebc201545049f875b}{render}} ()
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_shader}{Shader}} $>$ \mbox{\hyperlink{structrend_1_1_renderer_ab3b0fb8c2c12a7e252a21f18781314c1}{shader}} ()
+\item 
+void \mbox{\hyperlink{structrend_1_1_renderer_a6df8db25e319f9a6b4683dd1da3693a2}{shader}} (\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_shader}{Shader}} $>$ \+\_\+shader)
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_mesh}{Mesh}} $>$ \mbox{\hyperlink{structrend_1_1_renderer_a09b13305c2d02a44b0455eda62bf2083}{mesh}} ()
+\item 
+void \mbox{\hyperlink{structrend_1_1_renderer_afbe2279f40c39485f4a6e2ace5f55d59}{mesh}} (\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_mesh}{Mesh}} $>$ \+\_\+mesh)
+\item 
+void \mbox{\hyperlink{structrend_1_1_renderer_a28264aa0101e0f95327f9be5c8d8e2fc}{texture}} (\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_texture}{Texture}} $>$ \+\_\+texture)
+\item 
+void \mbox{\hyperlink{structrend_1_1_renderer_ad7b0c41cf92d8e2fe3a5703ebc8bcd6b}{texture1}} (\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_texture}{Texture}} $>$ \+\_\+texture)
+\item 
+void \mbox{\hyperlink{structrend_1_1_renderer_a03afd7c01187f637a3b4cbc399bcb042}{color}} (const \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{vec3}} \&\+\_\+color)
+\item 
+void \mbox{\hyperlink{structrend_1_1_renderer_ab10271a7136315f86c49937a9488d012}{color}} (const \mbox{\hyperlink{group__core__vector_ga233f0e8f1aecf686e67c5c39316c4da8}{vec4}} \&\+\_\+color)
+\item 
+\mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{mat4}} \mbox{\hyperlink{structrend_1_1_renderer_a342140cd7b7704e89eb6f2c640dc2c2a}{projection}} ()
+\item 
+void \mbox{\hyperlink{structrend_1_1_renderer_aa3464f82d7e01d3df5c28555ad160772}{projection}} (const \mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{mat4}} \&\+\_\+projection)
+\item 
+\mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{mat4}} \mbox{\hyperlink{structrend_1_1_renderer_a4d6a2a143fa58ea73a546d2a970a64a8}{model}} ()
+\item 
+void \mbox{\hyperlink{structrend_1_1_renderer_a4146455297fee215857470b47638141f}{model}} (const \mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{mat4}} \&\+\_\+model)
+\item 
+\mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{mat4}} \mbox{\hyperlink{structrend_1_1_renderer_a786dc6f7a9874d4e5fb96459c3284fa5}{view}} ()
+\item 
+void \mbox{\hyperlink{structrend_1_1_renderer_a083fe373f8e048e712adc8f2d6fb673c}{view}} (const \mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{mat4}} \&\+\_\+view)
+\item 
+void \mbox{\hyperlink{structrend_1_1_renderer_a24a6e3115f168784a48978718554c341}{backface\+Cull}} (bool \+\_\+backface\+Cull)
+\item 
+void \mbox{\hyperlink{structrend_1_1_renderer_acdb25a3345083f4bcb00bd41816b1ca9}{depth\+Test}} (bool \+\_\+depth\+Test)
+\item 
+void \mbox{\hyperlink{structrend_1_1_renderer_a8828836fedc6535fa3f8ddaad92ce83d}{clear\+Color}} (const \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{vec3}} \&\+\_\+clear\+Color)
+\item 
+void \mbox{\hyperlink{structrend_1_1_renderer_a131379450fb6c5fde438d9511633f9c5}{clear}} (bool \+\_\+color=true)
+\item 
+void \mbox{\hyperlink{structrend_1_1_renderer_a210f0e8d4a1824fa7e5251b1dcdd8b8d}{blend}} (bool \+\_\+blend)
+\item 
+\mbox{\hyperlink{structrend_1_1_ray}{Ray}} \mbox{\hyperlink{structrend_1_1_renderer_a3caddf46559a6c3d1e544c543cdaffa2}{raycast}} (int \+\_\+x, int \+\_\+y)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{structsys_1_1_enable_ptr}{sys\+::\+Enable\+Ptr}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_enable_ptr_acbc853cffc4885960c3d64a974c39d1e}{Enable\+Ptr}} ()
+\item 
+\mbox{\hyperlink{structsys_1_1_enable_ptr_a483f091e45484ce2969469e6a21e402c}{Enable\+Ptr}} (const \mbox{\hyperlink{structsys_1_1_enable_ptr}{Enable\+Ptr}} \&\+\_\+copy)
+\item 
+\mbox{\hyperlink{structsys_1_1_enable_ptr}{Enable\+Ptr}} \& \mbox{\hyperlink{structsys_1_1_enable_ptr_a694fbc3bd33631b59a9e0bac16fea429}{operator=}} (const \mbox{\hyperlink{structsys_1_1_enable_ptr}{Enable\+Ptr}} \&\+\_\+other)
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -37,6 +97,42 @@ void \mbox{\hyperlink{structrend_1_1_model_renderer_a8d7d61685590d98364b7a9bb8bb
 \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ float $>$ \mbox{\hyperlink{structrend_1_1_model_renderer_ae597d3dfba5dda557f62d3e39b245f28}{m\+\_\+frame}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{structrend_1_1_renderer}{rend\+::\+Renderer}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structrend_1_1_renderer_ab59712f58d27e48665d9090c4cd6b8b1}{initialize}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{structrend_1_1_renderer}{rend\+::\+Renderer}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_render_texture}{Render\+Texture}} $>$ \mbox{\hyperlink{structrend_1_1_renderer_a3d468abd1b3f329b2428f161a7422126}{m\+\_\+render\+Texture}}
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_shader}{Shader}} $>$ \mbox{\hyperlink{structrend_1_1_renderer_a394af426483297dcdfb4060503d4489e}{m\+\_\+shader}}
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_mesh}{Mesh}} $>$ \mbox{\hyperlink{structrend_1_1_renderer_a3edf4e0d33f6d5fbcc221c5e7cc594f3}{m\+\_\+mesh}}
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_texture}{Texture}} $>$ \mbox{\hyperlink{structrend_1_1_renderer_adef550bab2bb0dff91f5933067b62d17}{m\+\_\+texture}}
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_texture}{Texture}} $>$ \mbox{\hyperlink{structrend_1_1_renderer_a6dc17f7f14542aae1381fb069b280ff2}{m\+\_\+texture1}}
+\item 
+\mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{mat4}} \mbox{\hyperlink{structrend_1_1_renderer_af679c1c93c9808ff8650d5d0505cdabc}{m\+\_\+projection}}
+\item 
+\mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{mat4}} \mbox{\hyperlink{structrend_1_1_renderer_a12e7d7d615b1452c0c7c6ae267ab2c32}{m\+\_\+view}}
+\item 
+\mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{mat4}} \mbox{\hyperlink{structrend_1_1_renderer_aa9072951938fd0316b770888761ea9f7}{m\+\_\+model}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ bool $>$ \mbox{\hyperlink{structrend_1_1_renderer_a525eefb6bdec3315bf406aeaa40828df}{m\+\_\+depth\+Test}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ bool $>$ \mbox{\hyperlink{structrend_1_1_renderer_a5ead27d5447682f6976f4fde8b17066e}{m\+\_\+backface\+Cull}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ bool $>$ \mbox{\hyperlink{structrend_1_1_renderer_a995f5c10c5976e8cc922141bab9cfd48}{m\+\_\+blend}}
+\item 
+\mbox{\hyperlink{group__core__vector_ga233f0e8f1aecf686e67c5c39316c4da8}{vec4}} \mbox{\hyperlink{structrend_1_1_renderer_a9a1137cf89696cfa0d46a6e4b3b743b0}{m\+\_\+clear\+Color}}
+\item 
+\mbox{\hyperlink{group__core__vector_ga233f0e8f1aecf686e67c5c39316c4da8}{vec4}} \mbox{\hyperlink{structrend_1_1_renderer_af5717be47c300f017bc9e7975397ba66}{m\+\_\+color}}
+\item 
+\mbox{\hyperlink{group__core__vector_ga29b6216590129c7ac33f477dca55af32}{ivec2}} \mbox{\hyperlink{structrend_1_1_renderer_adb6b1c04d86ee42dc010fd4225cc526c}{m\+\_\+window\+Size}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -73,11 +169,11 @@ void \mbox{\hyperlink{structrend_1_1_model_renderer_a8d7d61685590d98364b7a9bb8bb
 \doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_part}{Part}} $>$ rend\+::\+Model\+Renderer\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_ray}{Ray}} \&}]{\+\_\+ray,  }\item[{float \&}]{\+\_\+distance }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{structrend_1_1_model_renderer_a6c67a77ad88284c6b35766e223b09cba}\label{structrend_1_1_model_renderer_a6c67a77ad88284c6b35766e223b09cba}} 
-\index{rend::ModelRenderer@{rend::ModelRenderer}!model@{model}}
-\index{model@{model}!rend::ModelRenderer@{rend::ModelRenderer}}
-\doxysubsubsection{\texorpdfstring{model()}{model()}}
-{\footnotesize\ttfamily void rend\+::\+Model\+Renderer\+::model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_model}{Model}} $>$}]{\+\_\+model }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{structrend_1_1_model_renderer_ad09d6b5856c4dd40a3fc13edd0e79c92}\label{structrend_1_1_model_renderer_ad09d6b5856c4dd40a3fc13edd0e79c92}} 
+\index{rend::ModelRenderer@{rend::ModelRenderer}!mesh@{mesh}}
+\index{mesh@{mesh}!rend::ModelRenderer@{rend::ModelRenderer}}
+\doxysubsubsection{\texorpdfstring{mesh()}{mesh()}}
+{\footnotesize\ttfamily void rend\+::\+Model\+Renderer\+::mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_model}{Model}} $>$}]{\+\_\+model }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{structrend_1_1_model_renderer_a8d7d61685590d98364b7a9bb8bb997a4}\label{structrend_1_1_model_renderer_a8d7d61685590d98364b7a9bb8bb997a4}} 
 \index{rend::ModelRenderer@{rend::ModelRenderer}!render@{render}}

@@ -1,0 +1,34 @@
+\hypertarget{_audio_source_8h_source}{}\doxysection{Audio\+Source.\+h}
+\label{_audio_source_8h_source}\index{src/northengine/AudioSource.h@{src/northengine/AudioSource.h}}
+\mbox{\hyperlink{_audio_source_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <AL/al.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <AL/alc.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacenorthengine}{northengine}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{struct\ }AudioClip;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnorthengine_1_1_audio_source}{AudioSource}}\ :\ \mbox{\hyperlink{structnorthengine_1_1_component}{Component}}\ }
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnorthengine_1_1_audio_source_aada8e43c846f68a31912dd7fe32d1538}{AudioSource}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_audio_source_a0ea4257103f4bad12f33a2cf6c7ecfa7}{setAudioClip}}(std::shared\_ptr<AudioClip>\ \_audioClip);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_audio_source_a7e18da8ca88a58e852ce36c9a1ae6aa2}{play}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_audio_source_a1c16f3baa1d0f308f5ce50b6cd1e9f01}{onTick}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::shared\_ptr<AudioClip>\ m\_audioClip;}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ ALuint\ \mbox{\hyperlink{structnorthengine_1_1_audio_source_ac32f1e8507aec8dc28cd56eec513a9ac}{sourceId}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ ALenum\ \mbox{\hyperlink{structnorthengine_1_1_audio_source_aed41b9a3659420b7295224c8fe8eab07}{format}};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ ALsizei\ \mbox{\hyperlink{structnorthengine_1_1_audio_source_a66897070b9a13015d49fad00e3a1b7c6}{freq}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::vector<unsigned\ char>\ \mbox{\hyperlink{structnorthengine_1_1_audio_source_a1d67a7622b006c04154581ebd8cbab78}{bufferData}};}
+\DoxyCodeLine{00045\ \ \ \ \ \};}
+\DoxyCodeLine{00046\ \}}
+
+\end{DoxyCode}

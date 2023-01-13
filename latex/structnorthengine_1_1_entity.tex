@@ -8,28 +8,31 @@
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{structnorthengine_1_1_entity_a9c12323850e5e3c26bcd305d61bb657d}{add\+Component}} ()
-\begin{DoxyCompactList}\small\item\em Stores the state of the entity. Alive or dead. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{structnorthengine_1_1_entity_a0830394f5796779261455f8126fd364e}{m\+\_\+alive}}
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_core}{Core}} $>$ \mbox{\hyperlink{structnorthengine_1_1_entity_a9de2c11955796c4df5e7282660df8446}{get\+Core}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_transform}{Transform}} $>$ \mbox{\hyperlink{structnorthengine_1_1_entity_a9505e4a64e42ca589026bcec10a7cb42}{get\+Transform}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{structnorthengine_1_1_entity_ac3e0a38822dba3d2494c9bdb2289e2ef}{tick}} ()
-\begin{DoxyCompactList}\small\item\em Vector of all components attached to this entity. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{structnorthengine_1_1_entity_aa5ebcb906430a378eb2dd579988a4101}{display}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_core}{Core}} $>$ \mbox{\hyperlink{structnorthengine_1_1_entity_aee5026a3c4b03ed59a480f918d5d772a}{m\+\_\+core}}
-\item 
+\begin{DoxyCompactList}\small\item\em pointer to core object \end{DoxyCompactList}\item 
 std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structnorthengine_1_1_entity_a35bb63b9011a32d1ba0e076f17213f9d}{m\+\_\+self}}
-\begin{DoxyCompactList}\small\item\em Reference to the core. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em pointer to self to pass down to components \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structnorthengine_1_1_entity_a0830394f5796779261455f8126fd364e}{m\+\_\+alive}}
+\begin{DoxyCompactList}\small\item\em stores state of the entity \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_component}{Component}} $>$ $>$ \mbox{\hyperlink{structnorthengine_1_1_entity_a40679007a1bc8a30d94cb10484f4b71e}{m\+\_\+components}}
-\begin{DoxyCompactList}\small\item\em Reference to self so children can access parent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em vector of components attached to the entity \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_transform}{Transform}} $>$ \mbox{\hyperlink{structnorthengine_1_1_entity_afe6e147f3b1f13e5128d9ae8e8dc7d27}{m\+\_\+transform}}
+\begin{DoxyCompactList}\small\item\em pointer to the transform component of this entity \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,7 +41,7 @@ struct \mbox{\hyperlink{structnorthengine_1_1_entity_acd0789873af2006e142a579250
 
 
 \doxysubsection{Detailed Description}
-The base class for every object in the game. 
+Base entity class. Every game object should be of type \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{structnorthengine_1_1_entity_a9c12323850e5e3c26bcd305d61bb657d}\label{structnorthengine_1_1_entity_a9c12323850e5e3c26bcd305d61bb657d}} 
@@ -48,27 +51,46 @@ The base class for every object in the game.
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 std\+::shared\+\_\+ptr$<$ T $>$ northengine\+::\+Entity\+::add\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Adds component of type T to m\+\_\+components.
 
-
-Stores the state of the entity. Alive or dead. 
-
-Add component to the entity and add it to m\+\_\+components. \mbox{\Hypertarget{structnorthengine_1_1_entity_aa5ebcb906430a378eb2dd579988a4101}\label{structnorthengine_1_1_entity_aa5ebcb906430a378eb2dd579988a4101}} 
+\begin{DoxyReturn}{Returns}
+pointer to new component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structnorthengine_1_1_entity_aa5ebcb906430a378eb2dd579988a4101}\label{structnorthengine_1_1_entity_aa5ebcb906430a378eb2dd579988a4101}} 
 \index{northengine::Entity@{northengine::Entity}!display@{display}}
 \index{display@{display}!northengine::Entity@{northengine::Entity}}
 \doxysubsubsection{\texorpdfstring{display()}{display()}}
 {\footnotesize\ttfamily void northengine\+::\+Entity\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+display function that is called every frame \mbox{\Hypertarget{structnorthengine_1_1_entity_a9de2c11955796c4df5e7282660df8446}\label{structnorthengine_1_1_entity_a9de2c11955796c4df5e7282660df8446}} 
+\index{northengine::Entity@{northengine::Entity}!getCore@{getCore}}
+\index{getCore@{getCore}!northengine::Entity@{northengine::Entity}}
+\doxysubsubsection{\texorpdfstring{getCore()}{getCore()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_core}{Core}} $>$ northengine\+::\+Entity\+::get\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets a pointer the parenting core object.
+
+\begin{DoxyReturn}{Returns}
+Pointer to core 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structnorthengine_1_1_entity_a9505e4a64e42ca589026bcec10a7cb42}\label{structnorthengine_1_1_entity_a9505e4a64e42ca589026bcec10a7cb42}} 
+\index{northengine::Entity@{northengine::Entity}!getTransform@{getTransform}}
+\index{getTransform@{getTransform}!northengine::Entity@{northengine::Entity}}
+\doxysubsubsection{\texorpdfstring{getTransform()}{getTransform()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_transform}{Transform}} $>$ northengine\+::\+Entity\+::get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets a pointer to the transform component that every entity has as default.
+
+\begin{DoxyReturn}{Returns}
+pointer to \mbox{\hyperlink{structnorthengine_1_1_transform}{Transform}} component 
+\end{DoxyReturn}
 \mbox{\Hypertarget{structnorthengine_1_1_entity_ac3e0a38822dba3d2494c9bdb2289e2ef}\label{structnorthengine_1_1_entity_ac3e0a38822dba3d2494c9bdb2289e2ef}} 
 \index{northengine::Entity@{northengine::Entity}!tick@{tick}}
 \index{tick@{tick}!northengine::Entity@{northengine::Entity}}
 \doxysubsubsection{\texorpdfstring{tick()}{tick()}}
 {\footnotesize\ttfamily void northengine\+::\+Entity\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-
-
-Vector of all components attached to this entity. 
-
-
+tick function that is called every frame 
 
 \doxysubsection{Friends And Related Function Documentation}
 \mbox{\Hypertarget{structnorthengine_1_1_entity_acd0789873af2006e142a579250891ce8}\label{structnorthengine_1_1_entity_acd0789873af2006e142a579250891ce8}} 
@@ -84,7 +106,11 @@ Vector of all components attached to this entity.
 \index{northengine::Entity@{northengine::Entity}!m\_alive@{m\_alive}}
 \index{m\_alive@{m\_alive}!northengine::Entity@{northengine::Entity}}
 \doxysubsubsection{\texorpdfstring{m\_alive}{m\_alive}}
-{\footnotesize\ttfamily bool northengine\+::\+Entity\+::m\+\_\+alive}
+{\footnotesize\ttfamily bool northengine\+::\+Entity\+::m\+\_\+alive\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+stores state of the entity 
 
 \mbox{\Hypertarget{structnorthengine_1_1_entity_a40679007a1bc8a30d94cb10484f4b71e}\label{structnorthengine_1_1_entity_a40679007a1bc8a30d94cb10484f4b71e}} 
 \index{northengine::Entity@{northengine::Entity}!m\_components@{m\_components}}
@@ -94,13 +120,17 @@ Vector of all components attached to this entity.
 
 
 
-Reference to self so children can access parent. 
+vector of components attached to the entity 
 
 \mbox{\Hypertarget{structnorthengine_1_1_entity_aee5026a3c4b03ed59a480f918d5d772a}\label{structnorthengine_1_1_entity_aee5026a3c4b03ed59a480f918d5d772a}} 
 \index{northengine::Entity@{northengine::Entity}!m\_core@{m\_core}}
 \index{m\_core@{m\_core}!northengine::Entity@{northengine::Entity}}
 \doxysubsubsection{\texorpdfstring{m\_core}{m\_core}}
 {\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{structnorthengine_1_1_core}{Core}}$>$ northengine\+::\+Entity\+::m\+\_\+core\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+pointer to core object 
 
 \mbox{\Hypertarget{structnorthengine_1_1_entity_a35bb63b9011a32d1ba0e076f17213f9d}\label{structnorthengine_1_1_entity_a35bb63b9011a32d1ba0e076f17213f9d}} 
 \index{northengine::Entity@{northengine::Entity}!m\_self@{m\_self}}
@@ -110,7 +140,17 @@ Reference to self so children can access parent.
 
 
 
-Reference to the core. 
+pointer to self to pass down to components 
+
+\mbox{\Hypertarget{structnorthengine_1_1_entity_afe6e147f3b1f13e5128d9ae8e8dc7d27}\label{structnorthengine_1_1_entity_afe6e147f3b1f13e5128d9ae8e8dc7d27}} 
+\index{northengine::Entity@{northengine::Entity}!m\_transform@{m\_transform}}
+\index{m\_transform@{m\_transform}!northengine::Entity@{northengine::Entity}}
+\doxysubsubsection{\texorpdfstring{m\_transform}{m\_transform}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{structnorthengine_1_1_transform}{Transform}}$>$ northengine\+::\+Entity\+::m\+\_\+transform\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+pointer to the transform component of this entity 
 
 
 

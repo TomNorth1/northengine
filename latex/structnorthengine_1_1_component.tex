@@ -7,26 +7,39 @@
 Inheritance diagram for northengine\+::Component\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=1.752739cm]{structnorthengine_1_1_component}
+\includegraphics[height=9.000000cm]{structnorthengine_1_1_component}
 \end{center}
 \end{figure}
-\doxysubsection*{Private Member Functions}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{on\+Tick}} ()
 \item 
 virtual void \mbox{\hyperlink{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}{on\+Display}} ()
 \item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structnorthengine_1_1_component_af3a47e84c6a254cb2e156f57b1f185fe}{get\+Entity}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
 void \mbox{\hyperlink{structnorthengine_1_1_component_ae818eb3c1dcb3677996536897ab6bcd2}{tick}} ()
 \item 
 void \mbox{\hyperlink{structnorthengine_1_1_component_a3d4ccb1e29a434a58378e0c6f7e1a403}{display}} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structnorthengine_1_1_component_aff0ebae02075384aa7c7e4a8bb5a823d}{m\+\_\+entity}}
+\begin{DoxyCompactList}\small\item\em pointer to owning entity \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structnorthengine_1_1_component_a4de4c6926260be1262f425df15fc9c82}{Entity}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Base component class that all components inherit from 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{structnorthengine_1_1_component_a3d4ccb1e29a434a58378e0c6f7e1a403}\label{structnorthengine_1_1_component_a3d4ccb1e29a434a58378e0c6f7e1a403}} 
@@ -35,25 +48,36 @@ struct \mbox{\hyperlink{structnorthengine_1_1_component_a4de4c6926260be1262f425d
 \doxysubsubsection{\texorpdfstring{display()}{display()}}
 {\footnotesize\ttfamily void northengine\+::\+Component\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+display function that is called every frame \mbox{\Hypertarget{structnorthengine_1_1_component_af3a47e84c6a254cb2e156f57b1f185fe}\label{structnorthengine_1_1_component_af3a47e84c6a254cb2e156f57b1f185fe}} 
+\index{northengine::Component@{northengine::Component}!getEntity@{getEntity}}
+\index{getEntity@{getEntity}!northengine::Component@{northengine::Component}}
+\doxysubsubsection{\texorpdfstring{getEntity()}{getEntity()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} $>$ northengine\+::\+Component\+::get\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets a pointer to owning entity
+
+\begin{DoxyReturn}{Returns}
+pointer to entity 
+\end{DoxyReturn}
 \mbox{\Hypertarget{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}\label{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}} 
 \index{northengine::Component@{northengine::Component}!onDisplay@{onDisplay}}
 \index{onDisplay@{onDisplay}!northengine::Component@{northengine::Component}}
 \doxysubsubsection{\texorpdfstring{onDisplay()}{onDisplay()}}
-{\footnotesize\ttfamily void northengine\+::\+Component\+::on\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void northengine\+::\+Component\+::on\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+virtual function for you to display the component every frame 
 
-
-Reimplemented in \mbox{\hyperlink{structnorthengine_1_1_triangle_renderer_aa8eddc09244afa9c4d6ea4d76f9eec4a}{northengine\+::\+Triangle\+Renderer}}.
+Reimplemented in \mbox{\hyperlink{structnorthengine_1_1_mesh_renderer_aa677a4e17c1e98caaec4b4c288b52488}{northengine\+::\+Mesh\+Renderer}}, and \mbox{\hyperlink{structnorthengine_1_1_triangle_renderer_aa8eddc09244afa9c4d6ea4d76f9eec4a}{northengine\+::\+Triangle\+Renderer}}.
 
 \mbox{\Hypertarget{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}\label{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}} 
 \index{northengine::Component@{northengine::Component}!onTick@{onTick}}
 \index{onTick@{onTick}!northengine::Component@{northengine::Component}}
 \doxysubsubsection{\texorpdfstring{onTick()}{onTick()}}
-{\footnotesize\ttfamily void northengine\+::\+Component\+::on\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void northengine\+::\+Component\+::on\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+virtual function where you would write functionality that needs to happen every frame 
 
-
-Reimplemented in \mbox{\hyperlink{struct_player_aa6a9d06e481e62626da52db9a6c79023}{Player}}.
+Reimplemented in \mbox{\hyperlink{struct_player_aa6a9d06e481e62626da52db9a6c79023}{Player}}, \mbox{\hyperlink{structnorthengine_1_1_audio_source_a1c16f3baa1d0f308f5ce50b6cd1e9f01}{northengine\+::\+Audio\+Source}}, \mbox{\hyperlink{structnorthengine_1_1_camera_a302fdc2066f691565399d246d13282a0}{northengine\+::\+Camera}}, and \mbox{\hyperlink{structnorthengine_1_1_rigid_body_a0330694279607066a91cc9bd2356e686}{northengine\+::\+Rigid\+Body}}.
 
 \mbox{\Hypertarget{structnorthengine_1_1_component_ae818eb3c1dcb3677996536897ab6bcd2}\label{structnorthengine_1_1_component_ae818eb3c1dcb3677996536897ab6bcd2}} 
 \index{northengine::Component@{northengine::Component}!tick@{tick}}
@@ -61,7 +85,7 @@ Reimplemented in \mbox{\hyperlink{struct_player_aa6a9d06e481e62626da52db9a6c7902
 \doxysubsubsection{\texorpdfstring{tick()}{tick()}}
 {\footnotesize\ttfamily void northengine\+::\+Component\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-
+tick function that is called every frame 
 
 \doxysubsection{Friends And Related Function Documentation}
 \mbox{\Hypertarget{structnorthengine_1_1_component_a4de4c6926260be1262f425df15fc9c82}\label{structnorthengine_1_1_component_a4de4c6926260be1262f425df15fc9c82}} 
@@ -69,6 +93,19 @@ Reimplemented in \mbox{\hyperlink{struct_player_aa6a9d06e481e62626da52db9a6c7902
 \index{Entity@{Entity}!northengine::Component@{northengine::Component}}
 \doxysubsubsection{\texorpdfstring{Entity}{Entity}}
 {\footnotesize\ttfamily friend struct \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_component_aff0ebae02075384aa7c7e4a8bb5a823d}\label{structnorthengine_1_1_component_aff0ebae02075384aa7c7e4a8bb5a823d}} 
+\index{northengine::Component@{northengine::Component}!m\_entity@{m\_entity}}
+\index{m\_entity@{m\_entity}!northengine::Component@{northengine::Component}}
+\doxysubsubsection{\texorpdfstring{m\_entity}{m\_entity}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}}$>$ northengine\+::\+Component\+::m\+\_\+entity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+pointer to owning entity 
 
 
 

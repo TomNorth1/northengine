@@ -15,10 +15,17 @@ Inheritance diagram for northengine\+::Triangle\+Renderer\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{structnorthengine_1_1_triangle_renderer_a5e1fb3ac90a7277a2e336b8ba34730af}{Triangle\+Renderer}} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{structnorthengine_1_1_component}{northengine\+::\+Component}}}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{structnorthengine_1_1_triangle_renderer_a2727ceefe7fd776e89c6a306cbc88d5f}{on\+Initialize}} ()
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{on\+Tick}} ()
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}{on\+Display}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structnorthengine_1_1_component_af3a47e84c6a254cb2e156f57b1f185fe}{get\+Entity}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{structnorthengine_1_1_triangle_renderer_aa8eddc09244afa9c4d6ea4d76f9eec4a}{on\+Display}} ()
 \end{DoxyCompactItemize}
@@ -31,9 +38,6 @@ void \mbox{\hyperlink{structnorthengine_1_1_triangle_renderer_aa8eddc09244afa9c4
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-\mbox{\hyperlink{structnorthengine_1_1_component}{Component}} for rendering triangles to the screen. 
-
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{structnorthengine_1_1_triangle_renderer_a5e1fb3ac90a7277a2e336b8ba34730af}\label{structnorthengine_1_1_triangle_renderer_a5e1fb3ac90a7277a2e336b8ba34730af}} 
 \index{northengine::TriangleRenderer@{northengine::TriangleRenderer}!TriangleRenderer@{TriangleRenderer}}
@@ -41,7 +45,7 @@ void \mbox{\hyperlink{structnorthengine_1_1_triangle_renderer_aa8eddc09244afa9c4
 \doxysubsubsection{\texorpdfstring{TriangleRenderer()}{TriangleRenderer()}}
 {\footnotesize\ttfamily northengine\+::\+Triangle\+Renderer\+::\+Triangle\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Load vertex and fragment shader. 
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{structnorthengine_1_1_triangle_renderer_aa8eddc09244afa9c4d6ea4d76f9eec4a}\label{structnorthengine_1_1_triangle_renderer_aa8eddc09244afa9c4d6ea4d76f9eec4a}} 
@@ -50,17 +54,11 @@ Load vertex and fragment shader.
 \doxysubsubsection{\texorpdfstring{onDisplay()}{onDisplay()}}
 {\footnotesize\ttfamily void northengine\+::\+Triangle\+Renderer\+::on\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
 
-Called every frame to draw triangle on the screen. 
+virtual function for you to display the component every frame 
 
 Reimplemented from \mbox{\hyperlink{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}{northengine\+::\+Component}}.
 
-\mbox{\Hypertarget{structnorthengine_1_1_triangle_renderer_a2727ceefe7fd776e89c6a306cbc88d5f}\label{structnorthengine_1_1_triangle_renderer_a2727ceefe7fd776e89c6a306cbc88d5f}} 
-\index{northengine::TriangleRenderer@{northengine::TriangleRenderer}!onInitialize@{onInitialize}}
-\index{onInitialize@{onInitialize}!northengine::TriangleRenderer@{northengine::TriangleRenderer}}
-\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
-{\footnotesize\ttfamily void northengine\+::\+Triangle\+Renderer\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Called on initialization of component. 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{structnorthengine_1_1_triangle_renderer_aa7dbbab7eb7627e8007677e0f35c7c28}\label{structnorthengine_1_1_triangle_renderer_aa7dbbab7eb7627e8007677e0f35c7c28}} 

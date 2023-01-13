@@ -2,42 +2,47 @@
 \label{_entity_8h_source}\index{src/northengine/Entity.h@{src/northengine/Entity.h}}
 \mbox{\hyperlink{_entity_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <memory>}}
-\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <vector>}}
-\DoxyCodeLine{3 }
-\DoxyCodeLine{4 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenorthengine}{northengine}} }
-\DoxyCodeLine{5 \{}
-\DoxyCodeLine{6     \textcolor{keyword}{struct }Component;}
-\DoxyCodeLine{7     \textcolor{keyword}{struct }Core;}
-\DoxyCodeLine{11     \textcolor{keyword}{struct }\mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} }
-\DoxyCodeLine{12     \{}
-\DoxyCodeLine{13         }
-\DoxyCodeLine{14         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structnorthengine_1_1_entity_a0830394f5796779261455f8126fd364e}{m\_alive}};}
-\DoxyCodeLine{15 }
-\DoxyCodeLine{16 }
-\DoxyCodeLine{17 }
-\DoxyCodeLine{18         \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{22         std::shared\_ptr<T> \mbox{\hyperlink{structnorthengine_1_1_entity_a9c12323850e5e3c26bcd305d61bb657d}{addComponent}}() }
-\DoxyCodeLine{23         \{}
-\DoxyCodeLine{24             std::shared\_ptr<T> rtn = std::make\_shared<T>();}
-\DoxyCodeLine{25 }
-\DoxyCodeLine{26             \mbox{\hyperlink{structnorthengine_1_1_entity_a40679007a1bc8a30d94cb10484f4b71e}{m\_components}}.push\_back(rtn);}
-\DoxyCodeLine{27             \textcolor{keywordflow}{return} rtn;}
-\DoxyCodeLine{28         \}}
-\DoxyCodeLine{29 }
-\DoxyCodeLine{30         }
-\DoxyCodeLine{31     \textcolor{keyword}{private}:}
-\DoxyCodeLine{32         \textcolor{keyword}{friend} \textcolor{keyword}{struct }\mbox{\hyperlink{structnorthengine_1_1_core}{Core}};}
-\DoxyCodeLine{33 }
-\DoxyCodeLine{34         std::weak\_ptr<Core> \mbox{\hyperlink{structnorthengine_1_1_entity_aee5026a3c4b03ed59a480f918d5d772a}{m\_core}};}
-\DoxyCodeLine{35         std::weak\_ptr<Entity> \mbox{\hyperlink{structnorthengine_1_1_entity_a35bb63b9011a32d1ba0e076f17213f9d}{m\_self}};}
-\DoxyCodeLine{36         std::vector<std::shared\_ptr<Component>> \mbox{\hyperlink{structnorthengine_1_1_entity_a40679007a1bc8a30d94cb10484f4b71e}{m\_components}};}
-\DoxyCodeLine{37 }
-\DoxyCodeLine{38         \textcolor{keywordtype}{void} \mbox{\hyperlink{structnorthengine_1_1_entity_ac3e0a38822dba3d2494c9bdb2289e2ef}{tick}}();}
-\DoxyCodeLine{39         \textcolor{keywordtype}{void} \mbox{\hyperlink{structnorthengine_1_1_entity_aa5ebcb906430a378eb2dd579988a4101}{display}}();}
-\DoxyCodeLine{40 }
-\DoxyCodeLine{41     \};}
-\DoxyCodeLine{42 }
-\DoxyCodeLine{43 \}}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacenorthengine}{northengine}}}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{struct\ }Core;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{struct\ }Component;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{struct\ }Transform;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}}}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::shared\_ptr<T>\ \mbox{\hyperlink{structnorthengine_1_1_entity_a9c12323850e5e3c26bcd305d61bb657d}{addComponent}}()\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<T>\ rtn\ =\ std::make\_shared<T>();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ rtn-\/>m\_entity\ =\ \mbox{\hyperlink{structnorthengine_1_1_entity_a35bb63b9011a32d1ba0e076f17213f9d}{m\_self}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnorthengine_1_1_entity_a40679007a1bc8a30d94cb10484f4b71e}{m\_components}}.push\_back(rtn);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rtn;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ std::shared\_ptr<Core>\ \mbox{\hyperlink{structnorthengine_1_1_entity_a9de2c11955796c4df5e7282660df8446}{getCore}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::shared\_ptr<Transform>\ \mbox{\hyperlink{structnorthengine_1_1_entity_a9505e4a64e42ca589026bcec10a7cb42}{getTransform}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnorthengine_1_1_core}{Core}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ std::weak\_ptr<Core>\ \mbox{\hyperlink{structnorthengine_1_1_entity_aee5026a3c4b03ed59a480f918d5d772a}{m\_core}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ std::weak\_ptr<Entity>\ \mbox{\hyperlink{structnorthengine_1_1_entity_a35bb63b9011a32d1ba0e076f17213f9d}{m\_self}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structnorthengine_1_1_entity_a0830394f5796779261455f8126fd364e}{m\_alive}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<Component>>\ \mbox{\hyperlink{structnorthengine_1_1_entity_a40679007a1bc8a30d94cb10484f4b71e}{m\_components}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ std::weak\_ptr<Transform>\ \mbox{\hyperlink{structnorthengine_1_1_entity_afe6e147f3b1f13e5128d9ae8e8dc7d27}{m\_transform}};\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_entity_ac3e0a38822dba3d2494c9bdb2289e2ef}{tick}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_entity_aa5ebcb906430a378eb2dd579988a4101}{display}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \};}
+\DoxyCodeLine{00066\ \}}
 
 \end{DoxyCode}

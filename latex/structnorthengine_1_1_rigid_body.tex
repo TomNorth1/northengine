@@ -1,0 +1,66 @@
+\hypertarget{structnorthengine_1_1_rigid_body}{}\doxysection{northengine\+::Rigid\+Body Struct Reference}
+\label{structnorthengine_1_1_rigid_body}\index{northengine::RigidBody@{northengine::RigidBody}}
+
+
+{\ttfamily \#include $<$Rigidbody.\+h$>$}
+
+Inheritance diagram for northengine\+::Rigid\+Body\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structnorthengine_1_1_rigid_body}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_rigid_body_a0330694279607066a91cc9bd2356e686}{on\+Tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{structnorthengine_1_1_component}{northengine\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{on\+Tick}} ()
+\item 
+virtual void \mbox{\hyperlink{structnorthengine_1_1_component_a6e02a5165b4ad31dab5401c9d5035ace}{on\+Display}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structnorthengine_1_1_component_af3a47e84c6a254cb2e156f57b1f185fe}{get\+Entity}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \mbox{\hyperlink{structnorthengine_1_1_rigid_body_ab645d57434f90270557e22e2a4646a64}{last\+Safe\+Pos}}
+\begin{DoxyCompactList}\small\item\em last known position where owning entity is not colliding with anything \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{structnorthengine_1_1_component}{Component}} that handles collision responses 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_rigid_body_a0330694279607066a91cc9bd2356e686}\label{structnorthengine_1_1_rigid_body_a0330694279607066a91cc9bd2356e686}} 
+\index{northengine::RigidBody@{northengine::RigidBody}!onTick@{onTick}}
+\index{onTick@{onTick}!northengine::RigidBody@{northengine::RigidBody}}
+\doxysubsubsection{\texorpdfstring{onTick()}{onTick()}}
+{\footnotesize\ttfamily void northengine\+::\+Rigid\+Body\+::on\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+check if we are colliding with another object if we are it calls the collision response function 
+
+Reimplemented from \mbox{\hyperlink{structnorthengine_1_1_component_ae790035e88af77cd82ee378f011c1410}{northengine\+::\+Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_rigid_body_ab645d57434f90270557e22e2a4646a64}\label{structnorthengine_1_1_rigid_body_ab645d57434f90270557e22e2a4646a64}} 
+\index{northengine::RigidBody@{northengine::RigidBody}!lastSafePos@{lastSafePos}}
+\index{lastSafePos@{lastSafePos}!northengine::RigidBody@{northengine::RigidBody}}
+\doxysubsubsection{\texorpdfstring{lastSafePos}{lastSafePos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} northengine\+::\+Rigid\+Body\+::last\+Safe\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+last known position where owning entity is not colliding with anything 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/northengine/\mbox{\hyperlink{_rigidbody_8h}{Rigidbody.\+h}}\item 
+src/northengine/\mbox{\hyperlink{_rigidbody_8cpp}{Rigidbody.\+cpp}}\end{DoxyCompactItemize}

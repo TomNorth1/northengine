@@ -6,8 +6,17 @@
 namespace northengine
 {
 	struct Resource;
+	/**
+	* Resource manager class
+	*/
 	struct Resources 
 	{
+		/**
+		* loads specified resource into the resource manager and adds it to m_resources
+		* 
+		* \param _path Path to resource 
+		* \return ptr to resource
+		*/
 		template <typename T>
 		std::shared_ptr<T> load(const sys::String& _path) 
 		{
@@ -39,6 +48,6 @@ namespace northengine
 		}
 	private:
 		friend Resource;
-		std::vector < std::shared_ptr<Resource>> m_resources;
+		std::vector < std::shared_ptr<Resource>> m_resources;///< vector of all loaded resources
 	};
 }

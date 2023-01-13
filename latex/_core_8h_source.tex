@@ -2,29 +2,73 @@
 \label{_core_8h_source}\index{src/northengine/Core.h@{src/northengine/Core.h}}
 \mbox{\hyperlink{_core_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <memory>}}
-\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <list>}}
-\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}SDL2/SDL.h"{}}}
-\DoxyCodeLine{4 }
-\DoxyCodeLine{5 }
-\DoxyCodeLine{6 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenorthengine}{northengine}}}
-\DoxyCodeLine{7 \{}
-\DoxyCodeLine{8     \textcolor{keyword}{struct }Entity;}
-\DoxyCodeLine{9     \textcolor{keyword}{struct }\mbox{\hyperlink{structnorthengine_1_1_core}{Core}}}
-\DoxyCodeLine{10     \{}
-\DoxyCodeLine{11         \textcolor{keyword}{static} std::shared\_ptr<Core> \mbox{\hyperlink{structnorthengine_1_1_core_a5f867169acedaa0942d74146099c2abc}{initialize}}();}
-\DoxyCodeLine{12         std::shared\_ptr<Entity> \mbox{\hyperlink{structnorthengine_1_1_core_af9a9592603b2c96ec9348013d69669cf}{addEntity}}();}
-\DoxyCodeLine{13 }
-\DoxyCodeLine{14         \textcolor{keywordtype}{void} \mbox{\hyperlink{structnorthengine_1_1_core_a38f4b88851e9746a2213d75cbce23547}{start}}();}
-\DoxyCodeLine{15         \textcolor{keywordtype}{void} \mbox{\hyperlink{structnorthengine_1_1_core_a946be7a06c2e820b8c6a552664636637}{stop}}();}
-\DoxyCodeLine{16     \textcolor{keyword}{private}:}
-\DoxyCodeLine{17         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structnorthengine_1_1_core_afefc9acede32f046b1f029b0ee279286}{m\_running}};}
-\DoxyCodeLine{18         SDL\_Window* \mbox{\hyperlink{structnorthengine_1_1_core_accc4a863a43cb5afe3269cfe0f4a5953}{m\_window}};}
-\DoxyCodeLine{19         SDL\_GLContext \mbox{\hyperlink{structnorthengine_1_1_core_abd5ca25cd82f6d5fa179ef5796c611ec}{m\_context}};}
-\DoxyCodeLine{20         std::weak\_ptr<Core> \mbox{\hyperlink{structnorthengine_1_1_core_a955a4d98cdef70e829db804107ed0567}{m\_self}};}
-\DoxyCodeLine{21 }
-\DoxyCodeLine{22         std::list <std::shared\_ptr<Entity> > \mbox{\hyperlink{structnorthengine_1_1_core_a2bde74df2d37caa711fdc011f15b18a7}{m\_entities}};}
-\DoxyCodeLine{23     \};}
-\DoxyCodeLine{24 \};}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacenorthengine}{northengine}}\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{struct\ }Entity;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{struct\ }InputHandler;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{struct\ }Resources;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{struct\ }Camera;}
+\DoxyCodeLine{00012\ \ \ \ \ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnorthengine_1_1_core}{Core}}}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<Core>\ \mbox{\hyperlink{structnorthengine_1_1_core_a5f867169acedaa0942d74146099c2abc}{initialize}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_core_a38f4b88851e9746a2213d75cbce23547}{start}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_core_a946be7a06c2e820b8c6a552664636637}{stop}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ std::shared\_ptr<Entity>\ \mbox{\hyperlink{structnorthengine_1_1_core_af9a9592603b2c96ec9348013d69669cf}{addEntity}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ std::shared\_ptr<InputHandler>\ \mbox{\hyperlink{structnorthengine_1_1_core_a190d56e140ca4979d1a995c6b3b22716}{inputHandler}};\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structnorthengine_1_1_core_a6792d77b86f42acc8a4318192ed50d1b}{find}}(std::vector<std::shared\_ptr<T>>\&\ \_out)\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ ei\ =\ 0;\ ei\ <\ \mbox{\hyperlink{structnorthengine_1_1_core_a87164758a6ce363cfd0f145e2d91c0cd}{m\_entities}}.size();\ ++ei)\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<Entity>\ e\ =\ \mbox{\hyperlink{structnorthengine_1_1_core_a87164758a6ce363cfd0f145e2d91c0cd}{m\_entities}}.at(ei);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ ci\ =\ 0;\ ci\ <\ e-\/>m\_components.size();\ ++ci)\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<Component>\ c\ =\ e-\/>m\_components.at(ci);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<T>\ t\ =\ std::dynamic\_pointer\_cast<T>(c);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (t)\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_out.push\_back(t);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structnorthengine_1_1_core_ac6da5c53d065c19df1cfcb0977478ad4}{getDeltaTime}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ std::shared\_ptr<Resources>\ \mbox{\hyperlink{structnorthengine_1_1_core_a322f435e9a9327709f14d3a05c7b423b}{getResources}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ std::weak\_ptr<Core>\ \mbox{\hyperlink{structnorthengine_1_1_core_a955a4d98cdef70e829db804107ed0567}{m\_self}};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structnorthengine_1_1_core_afefc9acede32f046b1f029b0ee279286}{m\_running}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<Entity>\ >\ \mbox{\hyperlink{structnorthengine_1_1_core_a87164758a6ce363cfd0f145e2d91c0cd}{m\_entities}};\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ std::shared\_ptr<Resources>\ \mbox{\hyperlink{structnorthengine_1_1_core_aaaddd7ffaf21bd3f5dfb27c5f4f5c006}{m\_resources}};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ SDL\_Window*\ \mbox{\hyperlink{structnorthengine_1_1_core_accc4a863a43cb5afe3269cfe0f4a5953}{m\_window}};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ SDL\_GLContext\ \mbox{\hyperlink{structnorthengine_1_1_core_abd5ca25cd82f6d5fa179ef5796c611ec}{m\_context}};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structnorthengine_1_1_core_a1ed0a153ee4e2ec15ff4818893311233}{deltaT}};}
+\DoxyCodeLine{00101\ \ \ \ \ \};}
+\DoxyCodeLine{00102\ \}}
 
 \end{DoxyCode}

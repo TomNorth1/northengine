@@ -1,0 +1,88 @@
+\hypertarget{structnorthengine_1_1_input_handler}{}\doxysection{northengine\+::Input\+Handler Struct Reference}
+\label{structnorthengine_1_1_input_handler}\index{northengine::InputHandler@{northengine::InputHandler}}
+
+
+{\ttfamily \#include $<$Keyboard.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_input_handler_a1b6bb2186af01b1939ec8ff27a3e4b15}{add\+Binding}} (SDL\+\_\+\+Keycode \+\_\+key, std\+::function$<$ void()$>$ \+\_\+func\+Down, std\+::function$<$ void()$>$ \+\_\+func\+Up)
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_input_handler_af3a8c292aeabe82e3d36cf4d6c77692f}{handle\+Key\+Down\+Event}} (SDL\+\_\+\+Event \&e)
+\item 
+void \mbox{\hyperlink{structnorthengine_1_1_input_handler_ac8d499131cb25e468a5b563d6c40576d}{handle\+Key\+Up\+Event}} (SDL\+\_\+\+Event \&e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structnorthengine_1_1_key_binding}{Key\+Binding}} $>$ $>$ \mbox{\hyperlink{structnorthengine_1_1_input_handler_adad7c0494a3bfa177dbe664c436a58bc}{m\+\_\+bindings}}
+\begin{DoxyCompactList}\small\item\em vector of all keybindings \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class that is responsible for creating key binds and handling input events 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_input_handler_a1b6bb2186af01b1939ec8ff27a3e4b15}\label{structnorthengine_1_1_input_handler_a1b6bb2186af01b1939ec8ff27a3e4b15}} 
+\index{northengine::InputHandler@{northengine::InputHandler}!addBinding@{addBinding}}
+\index{addBinding@{addBinding}!northengine::InputHandler@{northengine::InputHandler}}
+\doxysubsubsection{\texorpdfstring{addBinding()}{addBinding()}}
+{\footnotesize\ttfamily void northengine\+::\+Input\+Handler\+::add\+Binding (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Keycode}]{\+\_\+key,  }\item[{std\+::function$<$ void()$>$}]{\+\_\+func\+Down,  }\item[{std\+::function$<$ void()$>$}]{\+\_\+func\+Up }\end{DoxyParamCaption})}
+
+creates a new keybinding object
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+key} & the SDLKeycode you want to create a binding for \\
+\hline
+{\em \+\_\+func\+Down} & the function to call when key is pressed \\
+\hline
+{\em \+\_\+func\+Up} & the function to call when key is released \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structnorthengine_1_1_input_handler_af3a8c292aeabe82e3d36cf4d6c77692f}\label{structnorthengine_1_1_input_handler_af3a8c292aeabe82e3d36cf4d6c77692f}} 
+\index{northengine::InputHandler@{northengine::InputHandler}!handleKeyDownEvent@{handleKeyDownEvent}}
+\index{handleKeyDownEvent@{handleKeyDownEvent}!northengine::InputHandler@{northengine::InputHandler}}
+\doxysubsubsection{\texorpdfstring{handleKeyDownEvent()}{handleKeyDownEvent()}}
+{\footnotesize\ttfamily void northengine\+::\+Input\+Handler\+::handle\+Key\+Down\+Event (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \&}]{e }\end{DoxyParamCaption})}
+
+handles all key down events
+
+
+\begin{DoxyParams}{Parameters}
+{\em SDL} & event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structnorthengine_1_1_input_handler_ac8d499131cb25e468a5b563d6c40576d}\label{structnorthengine_1_1_input_handler_ac8d499131cb25e468a5b563d6c40576d}} 
+\index{northengine::InputHandler@{northengine::InputHandler}!handleKeyUpEvent@{handleKeyUpEvent}}
+\index{handleKeyUpEvent@{handleKeyUpEvent}!northengine::InputHandler@{northengine::InputHandler}}
+\doxysubsubsection{\texorpdfstring{handleKeyUpEvent()}{handleKeyUpEvent()}}
+{\footnotesize\ttfamily void northengine\+::\+Input\+Handler\+::handle\+Key\+Up\+Event (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \&}]{e }\end{DoxyParamCaption})}
+
+handles all key up events
+
+
+\begin{DoxyParams}{Parameters}
+{\em SDL} & event \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnorthengine_1_1_input_handler_adad7c0494a3bfa177dbe664c436a58bc}\label{structnorthengine_1_1_input_handler_adad7c0494a3bfa177dbe664c436a58bc}} 
+\index{northengine::InputHandler@{northengine::InputHandler}!m\_bindings@{m\_bindings}}
+\index{m\_bindings@{m\_bindings}!northengine::InputHandler@{northengine::InputHandler}}
+\doxysubsubsection{\texorpdfstring{m\_bindings}{m\_bindings}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structnorthengine_1_1_key_binding}{Key\+Binding}}$>$ $>$ northengine\+::\+Input\+Handler\+::m\+\_\+bindings\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+vector of all keybindings 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/northengine/\mbox{\hyperlink{_keyboard_8h}{Keyboard.\+h}}\item 
+src/northengine/\mbox{\hyperlink{_keyboard_8cpp}{Keyboard.\+cpp}}\end{DoxyCompactItemize}

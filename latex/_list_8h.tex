@@ -32,22 +32,22 @@ namespace \mbox{\hyperlink{namespacesys}{sys}}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{  \textcolor{keywordflow}{if}(m\_last)                      \(\backslash\)}
-\DoxyCodeLine{  \{                               \(\backslash\)}
-\DoxyCodeLine{    node-\/>m\_prev = m\_last;        \(\backslash\)}
-\DoxyCodeLine{    m\_last-\/>m\_next = node;        \(\backslash\)}
-\DoxyCodeLine{    m\_last = node;                \(\backslash\)}
-\DoxyCodeLine{  \}                               \(\backslash\)}
-\DoxyCodeLine{  \textcolor{keywordflow}{else}                            \(\backslash\)}
-\DoxyCodeLine{  \{                               \(\backslash\)}
-\DoxyCodeLine{    m\_first = node;               \(\backslash\)}
-\DoxyCodeLine{    m\_last = node;                \(\backslash\)}
-\DoxyCodeLine{  \}                               \(\backslash\)}
-\DoxyCodeLine{                                  \(\backslash\)}
-\DoxyCodeLine{  Ptr<T> rtn;                     \(\backslash\)}
-\DoxyCodeLine{  rtn.m\_ptr = \&node-\/>m\_value;     \(\backslash\)}
-\DoxyCodeLine{  rtn.m\_lock.lock(\&node-\/>m\_lock); \(\backslash\)}
-\DoxyCodeLine{                                  \(\backslash\)}
-\DoxyCodeLine{  \textcolor{keywordflow}{return} rtn;}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}(m\_last)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ node-\/>m\_prev\ =\ m\_last;\ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ m\_last-\/>m\_next\ =\ node;\ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ m\_last\ =\ node;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{else}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ m\_first\ =\ node;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ m\_last\ =\ node;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ Ptr<T>\ rtn;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ rtn.m\_ptr\ =\ \&node-\/>m\_value;\ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ rtn.m\_lock.lock(\&node-\/>m\_lock);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ rtn;}
 
 \end{DoxyCode}
